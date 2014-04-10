@@ -22,6 +22,7 @@ $(document).ready(function(){
 		})
 	});
 
+//test
 	$('.send_msg').on('click',function(){
 		var text_area = $('.write_msg textarea').val(),
 		    response_name = $('.write_msg input[name="your_name"]').val(),
