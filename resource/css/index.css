@@ -35,6 +35,7 @@ body{
 .pre_btn{
 	width:50px;
 	height:30px;
+	color:#000;
 	line-height:30px;
 	text-decoration:none;
 	float:left;
@@ -42,6 +43,7 @@ body{
 .next_btn{
 	width:50px;
 	height:30px;
+	color:#000;
 	line-height:30px;
 	text-decoration:none;
 	float:left;
@@ -53,18 +55,18 @@ body{
   width:20px;
   height:20px;
   border:2px solid #ef4d4e;
+  color:#ef4d4e;
   display:block;
   margin-left:4px;
   border-radius:12px;
 }
+#detail_span span:hover{
+	background-color:#ef4d4e;
+	color:#fff;
+}
 .loc_span{
-  width:20px;
-  height:20px;
-  border:2px solid #ef4d4e;
-  color:#fff;
-  display:block;
   background-color:#ef4d4e;
-  border-radius:12px;
+  color:#fff;
 }
 #detail_span div{
   color:#ef4d4e;

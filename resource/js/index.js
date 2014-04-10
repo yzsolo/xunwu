@@ -48,7 +48,7 @@ $(document).ready(function(){
 	$(".i_find_btn,.i_respond,.send_msg,.i_lost,.i_find,.descri_fin_con .things_submit_f,.descri_fin_con .things_submit_l").mouseenter(function(){
 		$(this).css("background-color","#e3170d");
 	}).mouseleave(function(){
-		$(this).css("background-color","#ff6766")
+		$(this).css("background-color","#ff6766");
 	})
 
 	$('.ind_tab_find').mousedown(function(){
@@ -110,22 +110,22 @@ $('.things_submit_l').click(function(){
 		var flag = flag_kind&flag_name&flag_locale&flag_finder&flag_telnum&flag_email&flag_qq;
 		if(flag){
 			$.ajax({
-			type:"POST",
-			url:getRootPath()+"/index.php/descri_lost/imformation",
-			data:{
-				kind_f:kind_f,
-				name_f:name_f,
-				locale_f:locale_f,
-				finder_f:finder_f,
-				telnum_f:telnum_f,
-				email_f:email_f,
-				qq_f:qq_f,
-				descri_f:descri_f
-			},
-			success:function(msg){
-				console.log("suc");
-		    }
-		})
+				type:"POST",
+				url:getRootPath()+"/index.php/descri_lost/imformation",
+				data:{
+					kind_f:kind_f,
+					name_f:name_f,
+					locale_f:locale_f,
+					finder_f:finder_f,
+					telnum_f:telnum_f,
+					email_f:email_f,
+					qq_f:qq_f,
+					descri_f:descri_f
+				},
+				success:function(msg){
+					console.log("suc");
+			    }
+			})
 		}
 })
 
@@ -213,6 +213,7 @@ var flag_style = function(flag,str){
 			"background",'#eee url('+getRootPath()+'/resource/img/tab_bgimg'+(i+1)+'.png) 10% 50% no-repeat'
 		)
 	}
+
 	// nav_img_show();
 	function nav_img_show(){
 		$('.los_nav ul li').eq(i).css(
@@ -273,46 +274,21 @@ var flag_style = function(flag,str){
 		})
 	})
 
+
+
 /*页码样式*/
 page_effect();
 function page_effect(){
-	var i = 0;
-	var cur_page = document.getElementById("cur_page").innerHTML;
-    var detail_span = document.getElementById('detail_span');
-    var span_length = detail_span.childNodes.length;
-    // alert(detail_span.childNodes.length +"  "+detail_span.children.length);
-
-    for(var j=0;j<=span_length;j++)
-    {
-    	if(j==cur_page-1){
-	        detail_span.children[cur_page-1].onmouseover = function(){
-
-	            var a = this.firstChild;
-	            paging_style(a,"#eee","#ef4d4e");    // console.log(this.nodeName);  this.nodeName 与this.tagName结果一样
-	            this.onmouseout = function()
-	            {
-	                paging_style(a,"#eee","#ef4d4e");
-	            }
-	        }
-    	}else{
-    		detail_span.children[j].onmouseover = function(){
-
-	            var a = this.firstChild;
-	            paging_style(a,"#eee","#ef4d4e");    // console.log(this.nodeName);  this.nodeName 与this.tagName结果一样
-	            this.onmouseout = function()
-	            {
-	                paging_style(a,"#ef4d4e","#eee");
-	            }
-	        }
-    	}
-    }
+	var i = 0,
+	    cur_page = $('#cur_page').html(),
+        spa = $('#detail_span span'),
+        spa_1 = spa.eq(0).html(),
+        change = cur_page - spa_1;
+    spa.eq(change).css({'color':'#fff','background':'#ef4d4e'})    
 }    
-
-    function paging_style( obj,scolor,sbgcolor){
-        obj.style.color = scolor;
-        obj.style.backgroundColor = sbgcolor;
-    }
 /*end*/
+
+
 
 function loadjs(path)
 {

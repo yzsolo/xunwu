@@ -57,7 +57,7 @@
 				   	<?php } ?>
 				    </div>
 
-					<!--<div id="cur_page"><?php echo $cur_page ?></div>-->
+					<div id="cur_page"><?php echo $cur_page ?></div>
 				</div>
 		    	
 		    </div>
