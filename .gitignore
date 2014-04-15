@@ -8,4 +8,4 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 captcha/*
-config/*
+application/config/*
