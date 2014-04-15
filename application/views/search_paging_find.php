@@ -32,21 +32,5 @@
 		<p>亲，没有了</p>
    	<?php } ?>
 </div>
-<!-- 		<?php echo $kind ?>
- -->		<div id="cur_page"><?php echo $cur_page ?></div>
-
-
-
-
-<!--
-	<div class="fin_detail_span" id="detail_span">
-			<?php for($i=1;$i<=$find_num;$i++){ ?>
-			<?php if($i == $cur_page){ ?>
-				<div name="f" class="loc_a"><span class="loc_span"><?php echo $i ?></span></div>
-			 <?php }else{ ?>
-			<div name="f"><span><?php echo $i ?></span></div>
-			<?php }} ?>
-	</div>
-	<div id="cur_page"><?php echo $cur_page ?></div>
-	<?php echo $find_num ?>
- </div> -->
+ 		
+<div id="cur_page"><?php echo $cur_page ?></div>

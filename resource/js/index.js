@@ -12,12 +12,9 @@ $(document).ready(function(){
 			},
 			success:function(msg){
 				console.log("success");
-				//var data = $.parseJSON(msg);
-				// console.log(msg);
 				$('#nav_box').next().html(msg);
 				loadjs(getRootPath()+'/resource/js/hah.js');
-		        // console.log(data);
-		        // console.log(data['find'][0].f_kind);
+		        
 			}
 		})
 	});
@@ -131,44 +128,44 @@ $('.things_submit_l').click(function(){
 })
 
 $('.things_submit_f').click(function(){
-		var kind_f = $(".kind select[name=kind_f]").val(),
-			name_f = $(".things_style input[name=name_f]").val(),
-			locale_f = $(".things_style input[name=locale_f]").val(),
-			finder_f = $(".things_style input[name=finder_f]").val(),
-			telnum_f = $(".things_style input[name=telnum_f]").val(),
-			email_f = $(".things_style input[name=email_f]").val(),
-			qq_f = $(".things_style input[name=qq_f]").val(),
-			descri_f = $(".things_style_area textarea[name=descri_f]").val()
-		var flag = flag_kind&flag_name&flag_locale&flag_finder&flag_telnum&flag_email&flag_qq;
-		if(flag){
-			$.ajax({
-			type:"POST",
-			url:getRootPath()+"/index.php/descri_find/imformation",
-			data:{
-				kind_f:kind_f,
-				name_f:name_f,
-				locale_f:locale_f,
-				finder_f:finder_f,
-				telnum_f:telnum_f,
-				email_f:email_f,
-				qq_f:qq_f,
-				descri_f:descri_f
-			},
-			success:function(msg){
-				console.log("suc");
-		    }
+	var kind_f = $(".kind select[name=kind_f]").val(),
+		name_f = $(".things_style input[name=name_f]").val(),
+		locale_f = $(".things_style input[name=locale_f]").val(),
+		finder_f = $(".things_style input[name=finder_f]").val(),
+		telnum_f = $(".things_style input[name=telnum_f]").val(),
+		email_f = $(".things_style input[name=email_f]").val(),
+		qq_f = $(".things_style input[name=qq_f]").val(),
+		descri_f = $(".things_style_area textarea[name=descri_f]").val()
+	var flag = flag_kind&flag_name&flag_locale&flag_finder&flag_telnum&flag_email&flag_qq;
+	if(flag){
+		$.ajax({
+		type:"POST",
+		url:getRootPath()+"/index.php/descri_find/imformation",
+		data:{
+			kind_f:kind_f,
+			name_f:name_f,
+			locale_f:locale_f,
+			finder_f:finder_f,
+			telnum_f:telnum_f,
+			email_f:email_f,
+			qq_f:qq_f,
+			descri_f:descri_f
+		},
+		success:function(msg){
+			console.log("suc");
+	    }
 		})
-		}
+	}
 })
 
 var flag_style = function(flag,str){
 	if(flag){
-			$(str).removeClass("wrong_img").addClass("right_img");
-			console.log("right");
-		}else{
-			$(str).removeClass("right_img").addClass("wrong_img");
-			console.log("wrong");
-		}
+		$(str).removeClass("wrong_img").addClass("right_img");
+		console.log("right");
+	}else{
+		$(str).removeClass("right_img").addClass("wrong_img");
+		console.log("wrong");
+	}
 }
 /*表单验证 end*/
 

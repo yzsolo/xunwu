@@ -3,13 +3,7 @@
 		<div class="search_f">失物招领栏</div>
 		<div class="search_l">失物发布栏</div>
 	</div>
-<!-- 	<div class="search_thekind">f</div>
- --><!--<?php foreach ($find as $news_item): ?>
-			<ul>
-				<li>商品编号：<?php echo $news_item['f_time'] ?></a></li>
-				<li>库存数量：<?php echo $news_item['f_name'] ?></li>
-			</ul>
-<?php endforeach ?>-->
+
 	<div class="search_con">
 
 		<div class="search_find_con">
@@ -34,22 +28,7 @@
 						<li name="three"><a href="<?php echo base_url("index.php/detail/pagef_detail/".$news_item['f_id']."") ?>">[详情]</a></li>
 					</ul>
 				    <?php endforeach ?>
-					<!-- <div class="fin_detail_span" id="detail_span">
-				    	<?php for($i=1;$i<=$find_num;$i++){ ?>
-				    	<?php if($i == $cur_page){ ?>
-				    	 	
-				    	 	<div class="loc_a" name="f">
-				    	 		<span class="loc_span"><?php echo $i ?></span>
-				    	 	</div>
-				    	 <?php }else{ ?>
-				   		<div name="f">
-				   			<span><?php echo $i ?></span>
-				   		</div>
-				   		<?php }} ?>
-					</div> -->
 
-					
-					
 					<div class="paging_box">
 					    <?php if($pre_f_btn==1){ ?>
 					    
@@ -73,14 +52,11 @@
 					   	<?php } ?>
 					</div>
 
-
-
 					<div id="cur_page"><?php echo $cur_page ?></div>
 					<?php echo $find_num ?>
 				</div>
 		    </div>
 		</div>
-
 
 		<div class="search_lost_con">
 				    <div class="search_los_con">
@@ -105,17 +81,6 @@
 					</ul>
 				    <?php endforeach ?>
 
-				    <!-- <div class="fin_detail_span" id="detail_span">
-				    	<?php for($i=1;$i<=$lost_num;$i++){ ?>
-				    	<?php if($i == $cur_page){ ?>
-				    	// 	<a class="loc_a" href="<?php echo base_url("index.php/defaults/search_paging/".$i."/l") ?>"><span class="loc_span"><?php echo $i ?></span></a>
-				    	 <div class="loc_a" name="l"><span class="loc_span"><?php echo $i ?></span></div>
-				    	 <?php }else{ ?>
-				   		<div name="l"><span><?php echo $i ?></span></div>
-				   		<?php }} ?>
-					</div> -->
-
-
 					<div class="paging_box">
 					    <?php if($pre_l_btn==1){ ?>
 					    
@@ -138,13 +103,6 @@
 							<p>亲，没有了</p>
 					   	<?php } ?>
 					</div>
-
-
-
-
-
-
-
 
 					<div id="cur_page"><?php echo $cur_page ?></div>
 				</div>

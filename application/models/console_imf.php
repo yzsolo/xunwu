@@ -108,10 +108,7 @@ public function get_kindnum_fmsg($kind){
    $res['total_rows'] = $query_one->result_array();
    return $res;
 }
-// public function get_new_pagef_part($data){
-//    $p_num = ($data-1)*14;
-//    $sql = "select * from things"
-// }
+
   /*捡到的物品 end*/
 
 

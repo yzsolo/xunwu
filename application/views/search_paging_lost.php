@@ -33,20 +33,4 @@
    	<?php } ?>
 </div>
 
-<!--<?php echo $kind ?>-->
 <div id="cur_page"><?php echo $cur_page ?></div>	
-
-
-
-
-<!--
-    <div class="fin_detail_span" id="detail_span">
-    	<?php for($i=1;$i<=$lost_num;$i++){ ?>
-    	<?php if($i == $cur_page){ ?>
-    	 	<div name="l" class="loc_a"><span class="loc_span"><?php echo $i ?></span></div>
-    	 <?php }else{ ?>
-   		<div name="l"><span><?php echo $i ?></span></div>
-   		<?php }} ?>
-	</div>
-	<div id="cur_page"><?php echo $cur_page ?></div>
- </div> -->
