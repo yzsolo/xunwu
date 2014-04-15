@@ -9,9 +9,21 @@ for(var i = 0; i<=4; i++){
 	)
 }
 
-$('#detail_span div').on('click',function(){
+$('.paging_box span').on('click',function(){
 	  var search_page_kind = $(this).attr('name');
-	  var search_page_num = $(this).children().text();
+	  var search_page_num = $(this).text();
+	  if(search_page_num =='上一页'){
+	  	search_page_num = $('.loc_span').prev().text();
+	  	if(search_page_num){
+	  		return true;
+	  	}
+	  }
+	  if(search_page_num =='下一页'){
+	  	search_page_num = $('.loc_span').next().text();
+	  	if(search_page_num){
+	  		return true;
+	  	}
+	  }
 		var search_input = $('input[name="search_input"]').val();
 		console.log(search_page_kind);
 		//var search_thekind = $('.search_thekind').text();
@@ -69,47 +81,16 @@ $('.search_f').on('click',function(){
 $('#search_box').next().remove();
 
 /*页码样式*/
-console.log('hello');
-
-function page_effect(){
-	var i = 0;
-	// var cur_page = document.getElementById("cur_page").innerHTML;
- //  var detail_span = document.getElementById('detail_span');
- //  var span_length = detail_span.childNodes.length;
-
-  var cur_page = $('#cur_page').html();
-  var detail_span = $('#detail_span');
-  var span_length = detail_span.children().length;
-    for(var j=0;j<=span_length;j++)
-    {
-    	if(j==cur_page-1){
-	        //detail_span.children[cur_page-1].onmouseover = function(){
-	        	detail_span.children().eq(cur_page-1).mouseover(function(){
-	            var a = this.children().eq(0);
-	            paging_style(a,"#eee","#ef4d4e");    // console.log(this.nodeName);  this.nodeName 与this.tagName结果一样
-	            this.mouseout(function()
-	            {
-	                paging_style(a,"#eee","#ef4d4e");
-	            });
-	        });
-    	}else{
-    		//detail_span.children[j].onmouseover = function(){
-    			detail_span.children().eq(j).mouseover(function(){
-	            var a = this.children().eq(0);
-	            paging_style(a,"#eee","#ef4d4e");    // console.log(this.nodeName);  this.nodeName 与this.tagName结果一样
-	            this.mouseout(function()
-	            {
-	                paging_style(a,"#ef4d4e","#eee");
-	            });
-	        });
-    	}
-    }
-}    
- function paging_style( obj,scolor,sbgcolor){
-        obj.style.color = scolor;
-        obj.style.backgroundColor = sbgcolor;
-    }
 page_effect();
+function page_effect(){
+	var i = 0,
+	    cur_page = $('#cur_page').html(),
+        spa = $('#detail_span span'),
+        spa_1 = spa.eq(0).html(),
+        change = cur_page - spa_1;
+    spa.eq(change).css({'color':'#fff','background':'#ef4d4e'})    
+}    
+
 function loadjs(path)
 {
 	var script = document.createElement("script");

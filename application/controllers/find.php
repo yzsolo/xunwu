@@ -114,8 +114,7 @@ class Find extends CI_Controller {
 
 			if($page_num==1||$page_num==2){
 			   $data['default_start']=1;
-			// $data['default_end']=6;
-			// $data['next_btn']=1;
+	
 				if($data['num']>6){
 					$data['default_end'] = 6;
 					$data['next_btn'] = 1;
@@ -123,39 +122,34 @@ class Find extends CI_Controller {
 			 		$data['default_end'] = $data['num'];
 			 		$data['next_btn'] = 3;
 			 	}
+
 				if($page_num==2){
 					$data['pre_btn']=1;
 				}elseif ($page_num==1) {
 					$data['pre_btn']=0;
 				}
+
 			}else{
 				$data['default_start']=$page_num-2;
-				// $data['default_num']=6;
 				$data['pre_btn']=1;
+
 				if($page_num+3>=$data['num']){
 					$data['default_end']=$data_num;
 					echo $data_num;
 					$data['default_start']=($data_num-5<=0?1:($data_num-5));
+
 					if($data_num<=6){
 						$data['next_btn']=3;
 					}else{
 						$data['next_btn']=0;
 					}
+
 				}else{
 					$data['default_end']=$page_num+3;
 					$data['next_btn']=1;
 				}
 			}
-			// if($data['num']>6){
-			// $data['default_end'] = 6;
-			// $data['next_btn'] = 1;
-			// }else{
-			// 	$data['default_end'] = $data['num'];
-			// 	$data['next_btn'] = 0;
-			// }
 
-
-			// var_dump($data);
 			$this->load->view('header');
 			$this->load->view('find_part_paging',$data);
 			$this->load->view('footer');
@@ -192,10 +186,9 @@ class Find extends CI_Controller {
 			}
 		}else{
 			$data['default_start']=$page_num-2;
-			// $data['default_end']=$page_num+3;
 			$data['default_num']=6;
 			$data['pre_btn']=1;
-			// $data['next_btn']=1;
+			
 			if($page_num+3>=$data['num']){
 				$data['default_end']=$data_num;
 				$data['default_start']=($data_num-5<=0?1:($data_num-5));

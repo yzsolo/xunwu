@@ -15,16 +15,17 @@
 		   	<?php }else{ ?>
 				
 		   	<?php } ?>
-		<div class="fin_detail_span" id="detail_span">
-			<?php $kind = (string)$news[0]['l_kind'] ?>
-			<?php for($i=$default_start;$i<=$default_end;$i++){ ?>
-			<?php if($i == $cur_page){ ?>
-	    	 	<a class="loc_a" href="<?php echo base_url("index.php/lost/lost_part_paging/".urlencode($kind)."/".$i."") ?>"><span class="loc_span"><?php echo $i ?></span></a>
-	    	 <?php }else{ ?>
-				<a href="<?php echo base_url("index.php/lost/lost_part_paging/".urlencode($kind)."/".$i."") ?>"><span><?php echo $i ?></span></a>
-			<?php }} ?>
-		</div>
-		<?php if($next_btn==1){ ?>
+			<div class="fin_detail_span" id="detail_span">
+				<?php $kind = (string)$news[0]['l_kind'] ?>
+				<?php for($i=$default_start;$i<=$default_end;$i++){ ?>
+				<?php if($i == $cur_page){ ?>
+		    	 	<a class="loc_a" href="<?php echo base_url("index.php/lost/lost_part_paging/".urlencode($kind)."/".$i."") ?>"><span class="loc_span"><?php echo $i ?></span></a>
+		    	 <?php }else{ ?>
+					<a href="<?php echo base_url("index.php/lost/lost_part_paging/".urlencode($kind)."/".$i."") ?>"><span><?php echo $i ?></span></a>
+				<?php }} ?>
+			</div>
+
+			<?php if($next_btn==1){ ?>
 		   		<a class="next_btn" href="<?php echo base_url("index.php/lost/lost_part_paging/".urlencode($kind)."/".($cur_page+1)."") ?>">下一页</a>
 		   	<?php }elseif($next_btn==0){ ?>
 				<p>亲，没有了</p>
