@@ -12,11 +12,12 @@ class Test extends CI_Controller {
 
 	public function aaa()
 	{
+		$img_url = base_url()."/captcha/";
 		$ranNum = rand(1000,9999);
 		$vals = array(
 		'word' => $ranNum,
 		'img_path' => './captcha/',
-		'img_url' => 'http://localhost/xunwu/captcha/',
+		'img_url' => $img_url,
 		'font_path' => './path/to/fonts/texb.ttf',
 		'img_width' => '100',
 		'img_height' => '30',
