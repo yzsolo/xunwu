@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>find</title>
+	<title>finder</title>
 	<link rel="stylesheet" href="<?php echo base_url('/resource/css/basic.css') ?>">
 	<link rel="stylesheet" href="<?php echo base_url('/resource/css/index.css') ?>">
 </head>
