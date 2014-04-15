@@ -31,9 +31,6 @@ class Lost extends CI_Controller {
 	}
 
 	public function page_lost_kind(){
-		// $kind = $this->input->post('lkind');
-		// $data['news'] = $this->console_imf->get_kind_lmsg($kind);
-		// $this->load->view('lost_part',$data);
 
 		$page_num = $this->uri->segment(3);
 		if(!$page_num){
@@ -48,7 +45,6 @@ class Lost extends CI_Controller {
 			$flag = $this->input->post('flag');
 			$kind_copy = "选择类型";
 
-
 		if($kind && $kind != $kind_copy){
 
 			$kind_copy = $kind;
@@ -60,17 +56,15 @@ class Lost extends CI_Controller {
 
 		}
 
-
 		$data['default_start']=1;
 		$data['pre_btn']=0;
-		// $data['default_end']=6;
 
 		$data['cur_page'] = $page_num;
 		$f = $this->console_imf->get_kind_lmsg($kind,$pnum);
 		$data["news"] = $f['news'];
 		$m = $this->console_imf->get_kindnum_lmsg($kind);
 		$num = $m['total_rows'];
-		 // var_dump($data['news']);
+
 		$data['num'] = floor($num[0]['num']/14)+1;
 		echo $data['num'];
 		if($data['num']>6){
@@ -101,19 +95,17 @@ class Lost extends CI_Controller {
 		$data['news'] = $f['news'];
 		$data_num = floor($f['total_rows']/14)+1;
 		$data['num']=$data_num;
-		// $data['default_num']=6;
-		// $data['next_btn']=1;
+	
 		if($page_num==1||$page_num==2){
-			   $data['default_start']=1;
-			// $data['default_end']=6;
-			// $data['next_btn']=1;
-				if($data['num']>6){
-					$data['default_end'] = 6;
-					$data['next_btn'] = 1;
-				}else{
-			 		$data['default_end'] = $data['num'];
-			 		$data['next_btn'] = 3;
-			 	}
+		    $data['default_start']=1;
+	
+			if($data['num']>6){
+				$data['default_end'] = 6;
+				$data['next_btn'] = 1;
+			}else{
+		 		$data['default_end'] = $data['num'];
+		 		$data['next_btn'] = 3;
+		 	}
 
 			if($page_num==2){
 				$data['pre_btn']=1;
@@ -168,8 +160,7 @@ class Lost extends CI_Controller {
 
 			if($page_num==1||$page_num==2){
 			    $data['default_start']=1;
-			// $data['default_end']=6;
-			// $data['next_btn']=1;
+			
 				if($data['num']>6){
 					$data['default_end'] = 6;
 					$data['next_btn'] = 1;
@@ -200,15 +191,7 @@ class Lost extends CI_Controller {
 				}
 			}
 			echo $data['num'];
-			// if($data['num']>6){
-			// $data['default_end'] = 6;
-			// $data['next_btn'] = 1;
-			// }else{
-			// 	$data['default_end'] = $data['num'];
-			// 	$data['next_btn'] = 0;
-			// }
-
-			// var_dump($data);
+			
 			$this->load->view('header');
 			$this->load->view('lost_part_paging',$data);
 			$this->load->view('footer');
@@ -216,6 +199,3 @@ class Lost extends CI_Controller {
 	}
 
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */

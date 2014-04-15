@@ -154,17 +154,10 @@ class Defaults extends CI_Controller {
 				}
 			}
 
-
-
-			//$this->load->view('header');
 			$this->load->view('search_paging_lost',$data);
-			// var_dump($data);
-			//$this->load->view('footer');
+		
 		}else{
 			var_dump($search_page_num);
 		}
 	}
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */

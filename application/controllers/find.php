@@ -68,7 +68,7 @@ class Find extends CI_Controller {
 		$data["news"] = $f['news'];
 		$m = $this->console_imf->get_kindnum_fmsg($kind);
 		$num = $m['total_rows'];
-		 // var_dump($data['news']);
+
 		$data['num'] = floor($num[0]['num']/14)+1;
 
 		if($data['num']>6){
@@ -86,7 +86,7 @@ class Find extends CI_Controller {
 			
 			 $this->load->view('find_part',$data);
 		}
-//		echo ($pnum);
+
 	}
 	/*find_part 分页*/
 	public function find_part_paging(){
@@ -169,8 +169,7 @@ class Find extends CI_Controller {
 
 		if($page_num==1||$page_num==2){
 			   $data['default_start']=1;
-			// $data['default_end']=6;
-			// $data['next_btn']=1;
+			
 			if($data['num']>6){
 				$data['default_end'] = 6;
 				$data['next_btn'] = 1;
@@ -206,13 +205,6 @@ class Find extends CI_Controller {
 		$this->load->view('find',$data);
 		$this->load->view('footer');
 	}
-/*find_part_paging*/
-	// public function pagef_part_paging(){
-	// 	$page_num = $this->uri->segment(3);
-	// 	$data['news'] = $this->console
-	// }
+
 
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
