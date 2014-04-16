@@ -26,7 +26,7 @@
 				</p></li>
 				</ul>
 				<div class="i_find_btn_box">
-					<a href="#"><div class="i_find_btn">我捡到了</div></a>
+					<a href="#" name='touch_with'><div class="i_find_btn">我捡到了</div></a>
 				</div>
 				<div class="help_find">
 					<span>帮忙转发到</span>
