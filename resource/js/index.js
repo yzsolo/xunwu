@@ -172,7 +172,7 @@ var flag_style = function(flag,str){
 
 
 
-	$('a[name=login_btn]').click(function(){
+	$('a[name=touch_with]').click(function(){
 		var w_h = window.innerHeight;
 		var w_w = window.innerWidth;
 		var l_w = $('#login').width();
