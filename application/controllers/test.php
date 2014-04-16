@@ -16,12 +16,12 @@ class Test extends CI_Controller {
 		$ranNum = rand(1000,9999);
 		$vals = array(
 		'word' => $ranNum,
+		'use_font' => 30,
 		'img_path' => './captcha/',
 		'img_url' => $img_url,
-		'font_path' => './path/to/fonts/texb.ttf',
-		'img_width' => '100',
+		'img_width' => '90',
 		'img_height' => '30',
-		'expiration' => 7200
+		'expiration' => 60,
 		);
 
 		$date = create_captcha($vals);
