@@ -8,6 +8,7 @@ class Test extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('console_imf');
 		$this->load->helper('captcha');
+		session_start();
 	}
 
 	public function aaa()
@@ -25,10 +26,27 @@ class Test extends CI_Controller {
 		);
 
 		$date = create_captcha($vals);
-
+		$_SESSION['yanzhen'] = sha1($ranNum.sha1("xunwu2014"));
 		$this->load->view('header');
-		$this->load->view('test',$date);
-		$this->load->view('footer');
+		$this->load->view('test', $date);
+		$this->load->view('testfoot');
+	}
+
+	public function verify()
+	{
+		$verify = $_POST['verify-input'];
+		$verify = sha1($verify.sha1("xunwu2014"));
+		if (isset($_SESSION['yanzhen'])) {
+			if ($verify == $_SESSION['yanzhen']) {
+				echo "1";
+			}
+			else{
+				echo "0";
+			}
+		}
+		else{
+			echo "0";
+		}
 	}
 }
 
