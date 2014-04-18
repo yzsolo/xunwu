@@ -868,6 +868,8 @@ body{
 }
 .descri_fin_con input{
 	height: 25px;
+	text-indent:7px;
+	border-radius:4px;
 	background-color: #ddd;
 	border: 0px solid #ddd;
 	float:left;overflow-x: scroll;
@@ -942,6 +944,9 @@ body{
 .things_style_area textarea{
 	width:300px;
 	height:100px;
+	padding: 7px;
+	line-height: 16px;
+	letter-spacing: 0.5px;
 	position:relative;
 	background-color:#ddd;
 	border:0px solid #ddd;

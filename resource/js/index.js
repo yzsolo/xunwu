@@ -121,7 +121,8 @@ $('.things_submit_l').click(function(){
 					descri_f:descri_f
 				},
 				success:function(msg){
-					console.log("suc");
+					alert("提交成功");
+					window.location.href=getRootPath()+"/index.php";
 			    }
 			})
 		}
@@ -152,7 +153,8 @@ $('.things_submit_f').click(function(){
 			descri_f:descri_f
 		},
 		success:function(msg){
-			console.log("suc");
+			alert("提交成功");
+			window.location.href=getRootPath()+"/index.php";
 	    }
 		})
 	}
@@ -227,12 +229,6 @@ var flag_style = function(flag,str){
 		$('.fin_nav ul li').eq(i).css("width",lost_nav[i]+"px");
 	}
 	/*tab bg_img end*/
-
-	$('.things_sub').click(function(){
-		var jump = setTimeout(function(){
-			 window.location.href="http://localhost/FindSomething/index.php/descri_find/page_descri_f";
-		}, 1000);
-	})
 
 	$('.fin_tab_select').change(function(){
 		 var kind = $(this).val();
