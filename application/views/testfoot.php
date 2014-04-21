@@ -23,15 +23,26 @@
 	<script src="<?php echo base_url('/resource/js/index.js') ?>"></script>
 	<script>
 		$(document).ready(function() {
-			
-			
-			var action = $('#myForm').attr('action');
-			$('#send').click(function() {
-				$.post(action,{
+			var action = $('#myForm').attr('action');	// 验证码提交的页面
+			$("#myForm").submit(function(e){	// ajax post
+				$.post(action+'/verify',{
 					'verify-input' : $('#verify-input').val()
 				},function(data, textStatus){
 					alert(data);
-				});				
+				});	
+				e.preventDefault();		// 阻止默认表单提交
+			});
+		
+			$("#myForm")
+			.find('img')
+			.attr('title', "换一张")
+			.css('cursor', "pointer")
+			.click(function(){
+				$.post(action+'/create',{
+					'verify-input' : $('#verify-input').val()
+				},function(data, textStatus){
+					$("#myForm").find('img').attr('src', data);
+				});
 			});
 		});
 	</script>

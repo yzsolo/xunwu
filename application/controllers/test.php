@@ -13,7 +13,7 @@ class Test extends CI_Controller {
 
 	public function aaa()
 	{
-		$img_url = base_url()."/captcha/";
+		$img_url = base_url()."captcha/";
 		$ranNum = rand(1000,9999);
 		$vals = array(
 		'word' => $ranNum,
@@ -32,6 +32,26 @@ class Test extends CI_Controller {
 		$this->load->view('testfoot');
 	}
 
+	public function create()
+	{
+		$img_url = base_url()."captcha/";
+		$ranNum = rand(1000,9999);
+		$vals = array(
+		'word' => $ranNum,
+		'use_font' => 30,
+		'img_path' => './captcha/',
+		'img_url' => $img_url,
+		'img_width' => '90',
+		'img_height' => '30',
+		'expiration' => 60,
+		);
+
+		$date = create_captcha($vals);
+		$_SESSION['yanzhen'] = sha1($ranNum.sha1("xunwu2014"));
+
+		echo $img_url.$date['time'].".jpg";
+	}
+
 	public function verify()
 	{
 		$verify = $_POST['verify-input'];
@@ -47,6 +67,11 @@ class Test extends CI_Controller {
 		else{
 			echo "0";
 		}
+	}
+
+	public function phone()
+	{
+		
 	}
 }
 
