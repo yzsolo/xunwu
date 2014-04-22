@@ -1312,10 +1312,38 @@ body{
 	display:none;
 }
 
-
-
-
-
-
-
-
+.verify{
+	margin-left: 50px;
+	display: none;
+}
+.verify label{
+	display: block;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+.verify #verify-input{
+	float: left;
+	width: 80px;
+	height: 34px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.verify img{
+	margin-top: 10px;
+	display: block;
+	width: 100px;
+	height: 40px;
+}
+.verify #send{
+	margin-left: 20px;
+	margin-top: 10px;
+	width: 80px;
+	height: 30px;
+	font-size: 18px;
+	cursor: pointer;
+	background-color: rgb(255, 103, 102);
+	border: 0;
+	padding: 0;
+	color: #FFF;
+}

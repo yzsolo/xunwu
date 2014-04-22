@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Test extends CI_Controller {
+class VerifyCode extends CI_Controller {
 
 	public function __construct()
 	{
@@ -17,11 +17,8 @@ class Test extends CI_Controller {
 		$ranNum = rand(1000,9999);
 		$vals = array(
 		'word' => $ranNum,
-		'use_font' => 30,
 		'img_path' => './captcha/',
 		'img_url' => $img_url,
-		'img_width' => '90',
-		'img_height' => '30',
 		'expiration' => 60,
 		);
 
@@ -29,7 +26,7 @@ class Test extends CI_Controller {
 		$_SESSION['yanzhen'] = sha1($ranNum.sha1("xunwu2014"));
 		$this->load->view('header');
 		$this->load->view('test', $date);
-		$this->load->view('testfoot');
+		$this->load->view('footer');
 	}
 
 	public function create()
@@ -38,11 +35,27 @@ class Test extends CI_Controller {
 		$ranNum = rand(1000,9999);
 		$vals = array(
 		'word' => $ranNum,
-		'use_font' => 30,
 		'img_path' => './captcha/',
 		'img_url' => $img_url,
-		'img_width' => '90',
-		'img_height' => '30',
+		'expiration' => 60,
+		);
+
+		$date = create_captcha($vals);
+		$_SESSION['yanzhen'] = sha1($ranNum.sha1("xunwu2014"));
+		
+		echo '<form action="#" method="POST" id="verifyForm">
+					<label for="verify-input">验证码：</label><input type="text" name="verify-input" id="verify-input" />'.$date['image'].'<input type="submit" value="提交" id="send"/>
+				</form>';
+	}
+
+	public function refresh()
+	{
+		$img_url = base_url()."captcha/";
+		$ranNum = rand(1000,9999);
+		$vals = array(
+		'word' => $ranNum,
+		'img_path' => './captcha/',
+		'img_url' => $img_url,
 		'expiration' => 60,
 		);
 

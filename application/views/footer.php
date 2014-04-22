@@ -21,6 +21,7 @@
 	<!--<script src="<?php echo base_url('/resource/js/jquery.js') ?>"></script>-->
 	<script src="http://cdn.staticfile.org/jquery/2.1.0/jquery.min.js"></script>
 	<script src="<?php echo base_url('/resource/js/index.js') ?>"></script>
+	<script src="<?php echo base_url('/resource/js/verify.js') ?>"></script>
 </div>
 </body>
 </html>
