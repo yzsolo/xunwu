@@ -5,7 +5,6 @@
 		</div>
 	    <div class="detail_con">
 			<div class="detail_detail">
-
 				<ul class="detail_ul_first">
 					<li>物品名称</li><li><?php echo $one_new['0']['f_name'] ?></li>
 				</ul>
@@ -27,7 +26,17 @@
 				</p></li>
 				</ul>
 				<div class="i_find_btn_box">
-					<a href="#" name="touch_with"><div class="i_find_btn">与Ta联系</div></a>
+					<a href="#"><div class="i_find_btn">与Ta联系</div></a>
+				</div>
+				<div class="verify">
+					<form action="<?php echo base_url('index.php/detail'); ?>" method="POST" id="verifyForm">
+						<label for="verify-input">输入验证码查看联系方式：</label>
+						<input type="text" id="verify-input" /><?php echo $image; ?><span></span>
+						<!-- 此处有两个隐藏表单 -->
+						<input type="hidden" id="verify-table" value="<?php echo $table; ?>">
+						<input type="hidden" id="verify-id" value="<?php echo $id; ?>">
+						<input type="submit" value="提交" id="send"/>
+					</form>
 				</div>
 				<div class="help_find">
 					<span>帮忙转发到</span>

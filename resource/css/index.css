@@ -1327,11 +1327,10 @@ body{
 	height: 34px;
 	margin-left: 20px;
 	margin-top: 10px;
-	margin-right: 10px;
+	font-size: 20px;
 }
 .verify img{
-	margin-top: 10px;
-	display: block;
+	margin: 10px 10px 0 10px;
 	width: 100px;
 	height: 40px;
 }
@@ -1346,4 +1345,14 @@ body{
 	border: 0;
 	padding: 0;
 	color: #FFF;
+	display: block;
+}
+.verify span{
+	color: red;
+	font-size: 18px;
+}
+.verify p{
+	margin-left: 20px;
+	margin-top: 20px;
+	font-size: 18px;
 }

@@ -29,9 +29,13 @@
 					<a href="#"><div class="i_find_btn">我捡到了</div></a>
 				</div>
 				<div class="verify">
-					<form action="<?php echo base_url('index.php/verifycode'); ?>" method="POST" id="verifyForm">
+					<form action="<?php echo base_url('index.php/detail'); ?>" method="POST" id="verifyForm">
 						<label for="verify-input">输入验证码查看联系方式：</label>
-						<input type="text" name="verify-input" id="verify-input" /><?php echo $image; ?><input type="submit" value="提交" id="send"/>
+						<input type="text" id="verify-input" /><?php echo $image; ?><span></span>
+						<!-- 此处有两个隐藏表单 -->
+						<input type="hidden" id="verify-table" value="<?php echo $table; ?>">
+						<input type="hidden" id="verify-id" value="<?php echo $id; ?>">
+						<input type="submit" value="提交" id="send"/>
 					</form>
 				</div>
 				<div class="help_find">
