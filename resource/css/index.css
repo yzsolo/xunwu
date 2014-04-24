@@ -305,6 +305,55 @@ body{
 	margin-right:3px;
     /*background-color:#ddd;*/
 }
+
+/*ul底色*/
+.fin_detail ul:nth-child(even) li{
+	background-color:#ddd;
+}
+.ind_tab_find_detail ul:nth-child(even) li{
+	background-color:#ddd;
+}
+.ind_tab_lost_detail ul:nth-child(even) li{
+	background-color:#ddd;
+}
+.los_detail ul:nth-child(even) li{
+	background-color:#ddd;
+}
+/*首页 tab 样式*/
+.los_nav ul li:nth-child(1),
+.fin_nav ul li:nth-child(1),
+.ind_tab_lost_nav ul li:nth-child(1),
+.ind_tab_find_nav ul li:nth-child(1){
+	background:#eee url(../img/tab_bgimg1.png) 10% 50% no-repeat;
+}
+.los_nav ul li:nth-child(2),
+.fin_nav ul li:nth-child(2),
+.ind_tab_lost_nav ul li:nth-child(2),
+.ind_tab_find_nav ul li:nth-child(2){
+	background:#eee url(../img/tab_bgimg2.png) 10% 50% no-repeat;
+}
+.los_nav ul li:nth-child(3),
+.fin_nav ul li:nth-child(3),
+.ind_tab_lost_nav ul li:nth-child(3),
+.ind_tab_find_nav ul li:nth-child(3){
+	background:#eee url(../img/tab_bgimg3.png) 10% 50% no-repeat;
+}
+.los_nav ul li:nth-child(4),
+.fin_nav ul li:nth-child(4),
+.ind_tab_lost_nav ul li:nth-child(4),
+.ind_tab_find_nav ul li:nth-child(4){
+	background:#eee url(../img/tab_bgimg4.png) 10% 50% no-repeat;
+}
+.los_nav ul li:nth-child(5),
+.fin_nav ul li:nth-child(5),
+.ind_tab_lost_nav ul li:nth-child(5),
+.ind_tab_find_nav ul li:nth-child(5){
+	background:#eee url(../img/tab_bgimg5.png) 10% 50% no-repeat;
+}
+/*对应栏目的tab样式*/
+
+
+
 .ind_tab_find_detail ul li[name="last"]{
 	width:197px;
 	height:30px;

@@ -19,7 +19,7 @@ $(document).ready(function(){
 		})
 	});
 
-//test
+	//test
 	$('.send_msg').on('click',function(){
 		var text_area = $('.write_msg textarea').val(),
 		    response_name = $('.write_msg input[name="your_name"]').val(),
@@ -64,47 +64,54 @@ $(document).ready(function(){
 	});
 
 
-/*表单验证 start*/
-$(".things_style input[name=name_f]").blur(function(){
-		 flag_name = this.value==""?false:true,str = "input[name=name_f]+div";
+	/*表单验证 start*/
+	$(".things_style input[name=name_f]").blur(function(){
+		flag_name = this.value==""?false:true,str = "input[name=name_f]+div";
 		flag_style(flag_name,str);
-})
-$(".things_style input[name=locale_f]").blur(function(){
-		 flag_locale = this.value==""?false:true,str = "input[name=locale_f]+div";
+	})
+
+	$(".things_style input[name=locale_f]").blur(function(){
+		flag_locale = this.value==""?false:true,str = "input[name=locale_f]+div";
 		flag_style(flag_locale,str);
-})
-$(".things_style input[name=finder_f]").blur(function(){
-		 flag_finder = this.value==""?false:true,str = "input[name=finder_f]+div";
+	})
+
+	$(".things_style input[name=finder_f]").blur(function(){
+		flag_finder = this.value==""?false:true,str = "input[name=finder_f]+div";
 		flag_style(flag_finder,str);
-})
-$(".kind select[name=kind_f]").blur(function(){
-		 flag_kind = this.value=="选择类型"?false:true, str = "select[name=kind_f]+div";
+	})
+
+	$(".kind select[name=kind_f]").blur(function(){
+		flag_kind = this.value=="选择类型"?false:true, str = "select[name=kind_f]+div";
 		flag_style(flag_kind,str);
-})
-$(".things_style input[name=telnum_f]").blur(function(){
+	})
+
+	$(".things_style input[name=telnum_f]").blur(function(){
 		var reg = new RegExp("^1[3|5|8]{1}[0-9]{9}$");
 		 flag_telnum = reg.test(this.value), str = "input[name=telnum_f]+div";
 		flag_style(flag_telnum,str);
-})
-$(".things_style input[name=email_f]").blur(function(){
+	})
+
+	$(".things_style input[name=email_f]").blur(function(){
 		var reg = new RegExp("^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$");
 		 flag_email = reg.test(this.value), str = "input[name=email_f]+div";
 		flag_style(flag_email,str);
-})
-$(".things_style input[name=qq_f]").blur(function(){
+	})
+
+	$(".things_style input[name=qq_f]").blur(function(){
 		var reg = new RegExp("^[1-9]{1}[0-9]{4,10}$");
 		 flag_qq = reg.test(this.value), str = "input[name=qq_f]+div";
 		flag_style(flag_qq,str);
-})
-$('.things_submit_l').click(function(){
+	})
+
+	$('.things_submit_l').click(function(){
 		var kind_f = $(".kind select[name=kind_f]").val(),
-			name_f = $(".things_style input[name=name_f]").val(),
-			locale_f = $(".things_style input[name=locale_f]").val(),
-			finder_f = $(".things_style input[name=finder_f]").val(),
-			telnum_f = $(".things_style input[name=telnum_f]").val(),
-			email_f = $(".things_style input[name=email_f]").val(),
-			qq_f = $(".things_style input[name=qq_f]").val(),
-			descri_f = $(".things_style_area textarea[name=descri_f]").val()
+			name_f = $("input[name=name_f]").val(),
+			locale_f = $("input[name=locale_f]").val(),
+			finder_f = $("input[name=finder_f]").val(),
+			telnum_f = $("input[name=telnum_f]").val(),
+			email_f = $("input[name=email_f]").val(),
+			qq_f = $("input[name=qq_f]").val(),
+			descri_f = $("textarea[name=descri_f]").val()
 		var flag = flag_kind&flag_name&flag_locale&flag_finder&flag_telnum&flag_email&flag_qq;
 		if(flag){
 			$.ajax({
@@ -126,93 +133,52 @@ $('.things_submit_l').click(function(){
 			    }
 			})
 		}
-})
-
-$('.things_submit_f').click(function(){
-	var kind_f = $(".kind select[name=kind_f]").val(),
-		name_f = $(".things_style input[name=name_f]").val(),
-		locale_f = $(".things_style input[name=locale_f]").val(),
-		finder_f = $(".things_style input[name=finder_f]").val(),
-		telnum_f = $(".things_style input[name=telnum_f]").val(),
-		email_f = $(".things_style input[name=email_f]").val(),
-		qq_f = $(".things_style input[name=qq_f]").val(),
-		descri_f = $(".things_style_area textarea[name=descri_f]").val()
-	var flag = flag_kind&flag_name&flag_locale&flag_finder&flag_telnum&flag_email&flag_qq;
-	if(flag){
-		$.ajax({
-		type:"POST",
-		url:getRootPath()+"/index.php/descri_find/imformation",
-		data:{
-			kind_f:kind_f,
-			name_f:name_f,
-			locale_f:locale_f,
-			finder_f:finder_f,
-			telnum_f:telnum_f,
-			email_f:email_f,
-			qq_f:qq_f,
-			descri_f:descri_f
-		},
-		success:function(msg){
-			alert("提交成功");
-			window.location.href=getRootPath()+"/index.php";
-	    }
-		})
-	}
-})
-
-var flag_style = function(flag,str){
-	if(flag){
-		$(str).removeClass("wrong_img").addClass("right_img");
-		console.log("right");
-	}else{
-		$(str).removeClass("right_img").addClass("wrong_img");
-		console.log("wrong");
-	}
-}
-/*表单验证 end*/
-
-
-
-
-	$('a[name=touch_with]').click(function(){
-		var w_h = window.innerHeight;
-		var w_w = window.innerWidth;
-		var l_w = $('#login').width();
-		var l_h = $('#login').height();
-		var l_top = w_h/2 - l_h/2 - 20;
-		var l_left = w_w/2 - l_w/2;
-		change('block');
-		$("#login").css({'top':l_top,'left':l_left});
-		$("#shade").css({'height':w_h+100,'width':w_w});
 	})
 
-	$('#shade').click(function(){change('none')});
-		
-	function change(sta){
-		$('#shade').css('display',sta);
-		$('#login').css('display',sta);
-	}
+	$('.things_submit_f').click(function(){
+		var kind_f = $(".kind select[name=kind_f]").val(),
+			name_f = $("input[name=name_f]").val(),
+			locale_f = $("input[name=locale_f]").val(),
+			finder_f = $("input[name=finder_f]").val(),
+			telnum_f = $("input[name=telnum_f]").val(),
+			email_f = $("input[name=email_f]").val(),
+			qq_f = $("input[name=qq_f]").val(),
+			descri_f = $("textarea[name=descri_f]").val()
+		var flag = flag_kind&flag_name&flag_locale&flag_finder&flag_telnum&flag_email&flag_qq;
+		if(flag){
+			$.ajax({
+			type:"POST",
+			url:getRootPath()+"/index.php/descri_find/imformation",
+			data:{
+				kind_f:kind_f,
+				name_f:name_f,
+				locale_f:locale_f,
+				finder_f:finder_f,
+				telnum_f:telnum_f,
+				email_f:email_f,
+				qq_f:qq_f,
+				descri_f:descri_f
+			},
+			success:function(msg){
+				alert("提交成功");
+				window.location.href=getRootPath()+"/index.php";
+		    }
+			})
+		}
+	})
 
-	/*index.php  tab bg_img start*/
-	$('.ind_tab_find_detail>ul:even li').css('background',"#ddd");
-	$('.ind_tab_lost_detail>ul:even li').css('background',"#ddd");
-	$('.los_detail>ul:even li').css('background',"#ddd");
-	$('.fin_detail>ul:even li').css('background',"#ddd");
-	for(var i = 0; i<=4; i++){
-		// console.log(i);
-		$('.ind_tab_find_con ul li').eq(i).css(
-			"background",'#eee url(resource/img/tab_bgimg'+(i+1)+'.png) 10% 50% no-repeat'
-		)
-		$('.ind_tab_lost_con ul li').eq(i).css(
-			"background",'#eee url(resource/img/tab_bgimg'+(i+1)+'.png) 10% 50% no-repeat'
-		)
-		$('.los_nav ul li').eq(i).css(
-			"background",'#eee url('+getRootPath()+'/resource/img/tab_bgimg'+(i+1)+'.png) 10% 50% no-repeat'
-		)
-		$('.fin_nav ul li').eq(i).css(
-			"background",'#eee url('+getRootPath()+'/resource/img/tab_bgimg'+(i+1)+'.png) 10% 50% no-repeat'
-		)
+	var flag_style = function(flag,str){
+		if(flag){
+			$(str).removeClass("wrong_img").addClass("right_img");
+			console.log("right");
+		}else{
+			$(str).removeClass("right_img").addClass("wrong_img");
+			console.log("wrong");
+		}
 	}
+	/*表单验证 end*/
+
+
 
 	// nav_img_show();
 	function nav_img_show(){
