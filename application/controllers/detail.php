@@ -19,7 +19,7 @@ class Detail extends CI_Controller {
 		'word' => $ranNum,
 		'img_path' => './captcha/',
 		'img_url' => $img_url,
-		'expiration' => 60,
+		'expiration' => 60
 		);
 
 		$date = create_captcha($vals);
