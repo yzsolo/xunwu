@@ -1086,9 +1086,9 @@ body{
 	display:inline;
 }
 .i_find_btn_box{
+	clear: both;
 	width:860px;
 	height:40px;
-	margin-top:20px;
 }
 .i_find_btn{
 	width:100px;
@@ -1105,14 +1105,16 @@ body{
 .help_find{
 	display:block;
 	width:300px;
-	height:31px;
-	line-height:31px;
-	margin:30px;
+	height:36px;
+	line-height:36px;
+	margin:15px 0 15px 30px;
 	margin-left:50px;
 	float:left;
 }
 .help_find span{
 	float:left;
+	margin-right: 10px;
+	font-size: 18px;
 }
 .help_find ul{
 	width:220px;
@@ -1139,6 +1141,7 @@ body{
 	width:860px;
 	height:40px;
 	float:left;
+	margin-top: 15px;
 }
 .i_respond{
 	width:100px;
@@ -1151,6 +1154,7 @@ body{
 	font-weight:700;
 	margin-left:50px;
 	background-color:#ff6766;
+	cursor: pointer;
 }
 .i_respond_box p{
 	width: 120px;

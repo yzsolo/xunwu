@@ -23,6 +23,7 @@
 	<script src="http://cdn.staticfile.org/jquery/1.11.0/jquery.min.js"></script>
 	<script src="<?php echo base_url('/resource/js/index.js') ?>"></script>
 	<script src="<?php echo base_url('/resource/js/verify.js') ?>"></script>
+	<script src="<?php echo base_url('/resource/js/exrt.js') ?>"></script>
 </div>
 </body>
 </html>

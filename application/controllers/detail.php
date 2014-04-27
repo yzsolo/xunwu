@@ -47,8 +47,10 @@ class Detail extends CI_Controller {
 		$data['image'] = $this->create();
 		$data['id'] = $id;
 		$data['table'] = "lmsg";
+		$data['headTitle'] = "失物-".$data['one_new'][0]['l_name']."|寻物网";
+		$data['description'] = $data['one_new'][0]['l_describ'];
 		// print_r($data);
-		$this->load->view('header');
+		$this->load->view('header', $data);
 		$this->load->view('detail_l',$data);
 		$this->load->view('footer');
 	}
