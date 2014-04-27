@@ -13,7 +13,7 @@
  <div class="paging_box">
     <?php if($pre_f_btn==1){ ?>
     
-   		<span class='loc_prev' name='f'>上一页</span>
+   		<span class='pre_btn' name='f' style="width:50px;height:30px;line-height:30px">上一页</span>
    
    	<?php }else{ ?>
 		
@@ -27,7 +27,7 @@
    		<?php }} ?>
 	</div>
 	<?php if($next_f_btn==1){ ?>
-   		<span class='loc_next' name='f'>下一页</span>
+   		<span class='next_btn' name='f' style="width:50px;height:30px;line-height:30px">下一页</span>
    	<?php }else{ ?>
 		<p>亲，没有了</p>
    	<?php } ?>
