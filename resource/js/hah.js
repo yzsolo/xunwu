@@ -1,6 +1,4 @@
-$('.los_detail>ul:even li').css('background',"#ddd");
-$('.fin_detail>ul:even li').css('background',"#ddd");
-for(var i = 0; i<=4; i++){
+for (var i = 0; i<=4; i++){
 	$('.search_los_nav ul li').eq(i).css(
 			"background",'#eee url('+getRootPath()+'/resource/img/tab_bgimg'+(i+1)+'.png) 10% 50% no-repeat'
 		)
@@ -10,23 +8,18 @@ for(var i = 0; i<=4; i++){
 }
 
 $('.paging_box span').on('click',function(){
-	  var search_page_kind = $(this).attr('name');
-	  var search_page_num = $(this).text();
-	  if(search_page_num =='上一页'){
-	  	search_page_num = $('.loc_span').prev().text();
-	  	if(search_page_num){
-	  		return true;
-	  	}
-	  }
-	  if(search_page_num =='下一页'){
-	  	search_page_num = $('.loc_span').next().text();
-	  	if(search_page_num){
-	  		return true;
-	  	}
-	  }
+		var search_page_kind = $(this).attr('name');
+		var search_page_num = $(this).text();
+
+		if (search_page_num =='上一页'){
+			search_page_num = $('.loc_span').prev().text();
+		}
+
+		if (search_page_num =='下一页'){
+			search_page_num = $('.loc_span').next().text();
+		}
 		var search_input = $('input[name="search_input"]').val();
-		console.log(search_page_kind);
-		//var search_thekind = $('.search_thekind').text();
+
 		$.ajax({
 			type:"post",
 			url:getRootPath()+"/index.php/defaults/search_paging",
@@ -39,15 +32,11 @@ $('.paging_box span').on('click',function(){
 			if(search_page_kind=='f'){
 				loadjs(getRootPath()+'/resource/js/hah.js');
 				$('.fin_detail').html(msg);
-				console.log("fin");
 			}else if(search_page_kind=='l'){
 				loadjs(getRootPath()+'/resource/js/hah.js');
 				$('.los_detail').html(msg);
-				console.log(msg);
-				console.log("los");
 			}
-
-				console.log('success');
+				page_effect();
 			}
 		})
 	});
@@ -83,12 +72,7 @@ $('#search_box').next().remove();
 /*页码样式*/
 page_effect();
 function page_effect(){
-	var i = 0,
-	    cur_page = $('#cur_page').html(),
-        spa = $('#detail_span span'),
-        spa_1 = spa.eq(0).html(),
-        change = cur_page - spa_1;
-    spa.eq(change).css({'color':'#fff','background':'#ef4d4e'})    
+    $('.loc_span').css({'color':'#fff','background':'#ef4d4e'});    
 }    
 
 function loadjs(path)

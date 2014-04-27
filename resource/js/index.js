@@ -1,23 +1,50 @@
 $(document).ready(function(){
  
- 
-	$('.search_btn').on('click',function(){
-		var search_input = $('input[name="search_input"]').val();
-		console.log(search_input);
-		$.ajax({
-			type:"post",
-			url:getRootPath()+"/index.php/defaults/search_result",
-			data:{
-				search_input:search_input
-			},
-			success:function(msg){
-				console.log("success");
-				$('#nav_box').next().html(msg);
-				loadjs(getRootPath()+'/resource/js/hah.js');
-		        
-			}
-		})
-	});
+ 	$('input[name=search_input]').focus(function(){
+ 		$(this).keypress(function(){
+ 			if(event.keyCode == 13){
+ 				// $('.search_btn').on('click',function(){
+				var search_input = $('input[name="search_input"]').val();
+				console.log(search_input);
+				$.ajax({
+					type:"post",
+					url:getRootPath()+"/index.php/defaults/search_result",
+					data:{
+						search_input:search_input
+					},
+					success:function(msg){
+						console.log("success");
+						$('#nav_box').next().html(msg);
+						loadjs(getRootPath()+'/resource/js/hah.js');
+						ul_style();
+						page_effect();
+				        
+					}
+				})
+ 			}
+ 		})
+ 	})
+	
+ 	$('.search_btn').on('click',function(){
+				var search_input = $('input[name="search_input"]').val();
+				console.log(search_input);
+				$.ajax({
+					type:"post",
+					url:getRootPath()+"/index.php/defaults/search_result",
+					data:{
+						search_input:search_input
+					},
+					success:function(msg){
+						console.log("success");
+						$('#nav_box').next().html(msg);
+						loadjs(getRootPath()+'/resource/js/hah.js');
+						ul_style();
+						page_effect();
+					}
+				})
+			});
+
+
 
 	//test
 	$('.send_msg').on('click',function(){
@@ -196,6 +223,7 @@ $(document).ready(function(){
 	}
 	/*tab bg_img end*/
 
+
 	$('.fin_tab_select').change(function(){
 		 var kind = $(this).val();
 		 var flag = 1;
@@ -210,6 +238,7 @@ $(document).ready(function(){
 				// console.log("hah");
 			   $(".fin_detail").html(msg);
 			   $('.fin_detail>ul:even li').css('background',"#ddd");
+			   ul_style();
 			   page_effect();
 		    }
 		})
@@ -228,23 +257,25 @@ $(document).ready(function(){
 			success:function(msg){
 			   $(".los_detail").html(msg);
 			   $('.los_detail>ul:even li').css('background',"#ddd");
+			   ul_style();
 			   page_effect();
 			   // console.log(msg[cur_page]);
 		    }
 		})
 	})
+	function ul_style(){
+		console.log('jaj');
+		$('.fin_detail>ul:even>li,.los_detail>ul:even>li').css('background','#eee');
+		// $('.los_detail>ul:even>li').css('background','#eee');
 
+	}
 
 
 /*页码样式*/
 page_effect();
 function page_effect(){
-	var i = 0,
-	    cur_page = $('#cur_page').html(),
-        spa = $('#detail_span span'),
-        spa_1 = spa.eq(0).html(),
-        change = cur_page - spa_1;
-    spa.eq(change).css({'color':'#fff','background':'#ef4d4e'})    
+
+    $('.loc_span').css({'color':'#fff','background':'#ef4d4e'});
 }    
 /*end*/
 

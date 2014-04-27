@@ -32,22 +32,6 @@ body{
 	right:0px;
 	bottom:0px;
 }
-.pre_btn{
-	width:50px;
-	height:30px;
-	color:#000;
-	line-height:30px;
-	text-decoration:none;
-	float:left;
-}
-.next_btn{
-	width:50px;
-	height:30px;
-	color:#000;
-	line-height:30px;
-	text-decoration:none;
-	float:left;
-}
 
 
 /*页码*/
@@ -56,6 +40,7 @@ body{
   height:20px;
   border:2px solid #ef4d4e;
   color:#ef4d4e;
+  cursor:pointer;
   display:block;
   margin-left:4px;
   border-radius:12px;
@@ -723,7 +708,24 @@ body{
 
 
 
-
+.pre_btn{
+	width:50px;
+	height:30px;
+	color:#000;
+	line-height:30px;
+	cursor:pointer;
+	text-decoration:none;
+	float:left;
+}
+.next_btn{
+	width:50px;
+	height:30px;
+	color:#000;
+	cursor:pointer;
+	line-height:30px;
+	text-decoration:none;
+	float:left;
+}
 
 
 
@@ -1023,11 +1025,10 @@ body{
 
 
 
-
 /*detail start*/
 #detail_con{
 	width:960px;
-	min-height:950px;
+	/*min-height:950px;*/
 	height:auto;
 	position:relative;
 	/*border:1px solid #999;*/
