@@ -243,6 +243,7 @@ $(document).ready(function(){
 		    }
 		})
 	})
+	
 
 	$('.los_tab_select').change(function(){
 		 var kind = $(this).val();
