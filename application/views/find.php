@@ -56,8 +56,8 @@
 						<p>亲，没有了</p>
 				   	<?php } ?>
 				   </div>
-					 <div id="cur_page"><?php echo $cur_page ?></div> 
-				</div>
+<!-- 					 <div id="cur_page"><?php echo $cur_page ?></div> 
+ -->				</div>
 		    </div>
 	    </div>
 	</div>

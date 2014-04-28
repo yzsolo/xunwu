@@ -52,8 +52,8 @@
 					   	<?php } ?>
 					</div>
 
-					<div id="cur_page"><?php echo $cur_page ?></div>
-					<?php echo $find_num ?>
+					<!-- <div id="cur_page"><?php echo $cur_page ?></div>
+					<?php echo $find_num ?> -->
 				</div>
 		    </div>
 		</div>
@@ -104,8 +104,8 @@
 					   	<?php } ?>
 					</div>
 
-					<div id="cur_page"><?php echo $cur_page ?></div>
-				</div>
+<!-- 					<div id="cur_page"><?php echo $cur_page ?></div>
+ -->				</div>
 		    	
 		    </div>
 		</div>

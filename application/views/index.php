@@ -1,7 +1,7 @@
 <div id="ind_con">
 	<div class="ind_con_detail">
 		<div class="ind_tab">
-			<div class="ind_tab_lost">最新寻物信息</div>
+			<div class="ind_tab_lost">最新失物信息</div>
 			<div class="ind_tab_find">最新招领信息</div>
 		</div>
 		<div class="ind_tab_con_box">
