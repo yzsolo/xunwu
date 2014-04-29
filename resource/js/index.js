@@ -118,17 +118,17 @@ $(document).ready(function(){
 		flag_style(flag_telnum,str);
 	})
 
-	$(".things_style input[name=email_f]").blur(function(){
-		var reg = new RegExp("^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$");
-		 flag_email = reg.test(this.value), str = "input[name=email_f]+div";
-		flag_style(flag_email,str);
-	})
+	// $(".things_style input[name=email_f]").blur(function(){
+	// 	var reg = new RegExp("^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$");
+	// 	 flag_email = reg.test(this.value), str = "input[name=email_f]+div";
+	// 	flag_style(flag_email,str);
+	// })
 
-	$(".things_style input[name=qq_f]").blur(function(){
-		var reg = new RegExp("^[1-9]{1}[0-9]{4,10}$");
-		 flag_qq = reg.test(this.value), str = "input[name=qq_f]+div";
-		flag_style(flag_qq,str);
-	})
+	// $(".things_style input[name=qq_f]").blur(function(){
+	// 	var reg = new RegExp("^[1-9]{1}[0-9]{4,10}$");
+	// 	 flag_qq = reg.test(this.value), str = "input[name=qq_f]+div";
+	// 	flag_style(flag_qq,str);
+	// })
 
 	$('.things_submit_l').click(function(){
 		var kind_f = $(".kind select[name=kind_f]").val(),
@@ -136,10 +136,10 @@ $(document).ready(function(){
 			locale_f = $("input[name=locale_f]").val(),
 			finder_f = $("input[name=finder_f]").val(),
 			telnum_f = $("input[name=telnum_f]").val(),
-			email_f = $("input[name=email_f]").val(),
-			qq_f = $("input[name=qq_f]").val(),
+			// email_f = $("input[name=email_f]").val(),
+			// qq_f = $("input[name=qq_f]").val(),
 			descri_f = $("textarea[name=descri_f]").val()
-		var flag = flag_kind&flag_name&flag_locale&flag_finder&flag_telnum&flag_email&flag_qq;
+		var flag = flag_kind&flag_name&flag_locale&flag_finder&flag_telnum;
 		if(flag){
 			$.ajax({
 				type:"POST",
@@ -150,8 +150,8 @@ $(document).ready(function(){
 					locale_f:locale_f,
 					finder_f:finder_f,
 					telnum_f:telnum_f,
-					email_f:email_f,
-					qq_f:qq_f,
+					// email_f:email_f,
+					// qq_f:qq_f,
 					descri_f:descri_f
 				},
 				success:function(msg){
@@ -168,10 +168,10 @@ $(document).ready(function(){
 			locale_f = $("input[name=locale_f]").val(),
 			finder_f = $("input[name=finder_f]").val(),
 			telnum_f = $("input[name=telnum_f]").val(),
-			email_f = $("input[name=email_f]").val(),
-			qq_f = $("input[name=qq_f]").val(),
+			// email_f = $("input[name=email_f]").val(),
+			// qq_f = $("input[name=qq_f]").val(),
 			descri_f = $("textarea[name=descri_f]").val()
-		var flag = flag_kind&flag_name&flag_locale&flag_finder&flag_telnum&flag_email&flag_qq;
+		var flag = flag_kind&flag_name&flag_locale&flag_finder&flag_telnum;
 		if(flag){
 			$.ajax({
 			type:"POST",
@@ -182,8 +182,8 @@ $(document).ready(function(){
 				locale_f:locale_f,
 				finder_f:finder_f,
 				telnum_f:telnum_f,
-				email_f:email_f,
-				qq_f:qq_f,
+				// email_f:email_f,
+				// qq_f:qq_f,
 				descri_f:descri_f
 			},
 			success:function(msg){
@@ -243,7 +243,7 @@ $(document).ready(function(){
 		    }
 		})
 	})
-	
+
 
 	$('.los_tab_select').change(function(){
 		 var kind = $(this).val();
