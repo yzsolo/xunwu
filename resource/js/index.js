@@ -22,27 +22,29 @@ $(document).ready(function(){
 					}
 				})
  			}
+ 			$('#nav_box a').removeClass('nav_cur');
  		})
  	})
 	
  	$('.search_btn').on('click',function(){
-				var search_input = $('input[name="search_input"]').val();
-				console.log(search_input);
-				$.ajax({
-					type:"post",
-					url:getRootPath()+"/index.php/defaults/search_result",
-					data:{
-						search_input:search_input
-					},
-					success:function(msg){
-						console.log("success");
-						$('#nav_box').next().html(msg);
-						loadjs(getRootPath()+'/resource/js/hah.js');
-						ul_style();
-						page_effect();
-					}
-				})
-			});
+		var search_input = $('input[name="search_input"]').val();
+		console.log(search_input);
+		$.ajax({
+			type:"post",
+			url:getRootPath()+"/index.php/defaults/search_result",
+			data:{
+				search_input:search_input
+			},
+			success:function(msg){
+				console.log("success");
+				$('#nav_box').next().html(msg);
+				loadjs(getRootPath()+'/resource/js/hah.js');
+				ul_style();
+				page_effect();
+			}
+		})
+		$('#nav_box a').removeClass('nav_cur');
+	});
 
 
 
