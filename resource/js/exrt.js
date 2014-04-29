@@ -20,5 +20,6 @@ window.onload = function() {
 	$(".i_respond_box").click(function(){
 		$(".wrap-text-f").click();
 		$(".textarea-fw").focus();
+		$(".head-gold-w").remove();
 	});
 };
