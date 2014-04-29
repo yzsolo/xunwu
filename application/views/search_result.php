@@ -1,7 +1,7 @@
 <div id="search_box">
 	<div class="search_top">
-		<div class="search_f">失物招领栏</div>
-		<div class="search_l">失物发布栏</div>
+		<div class="search_f">招领信息</div>
+		<div class="search_l">失物信息</div>
 	</div>
 
 	<div class="search_con">

@@ -20,7 +20,7 @@
 					<div class="flag_img"></div>
 		    	</div>
 		    	<div class="things_style">
-		    		<label class="label">物品名 :</label>
+		    		<label class="label">物品名称 :</label>
 		    		<input name="name_f" maxlength="10" placeholder="物品名" type="text">
 		    		<div class="flag_img"></div>
 		    	</div>
@@ -34,15 +34,15 @@
 		    		<input name="finder_f" maxlength="10" placeholder="失主姓名" type="text">
 		    		<div class="flag_img"></div>
 		    	</div>
-		    	<div class="things_style">
+		    	<!-- <div class="things_style">
 		    		<label>以下三种联系方式至少填写一种:</label>
-		    	</div>
+		    	</div> -->
 		    	<div class="things_style">
 		    		<label class="label">联系电话 :</label>
 		    		<input name="telnum_f" placeholder="联系电话" type="text">
 		    		<div class="flag_img"></div>
 		    	</div>
-		    	<div class="things_style">
+		    	<!-- <div class="things_style">
 		    		<label class="label">邮箱 :</label>
 		    		<input name="email_f" placeholder="邮箱" type="text">
 		    		<div class="flag_img"></div>
@@ -51,7 +51,7 @@
 		    		<label class="label">qq :</label>
 		    		<input name="qq_f" placeholder="qq" type="text">
 		    		<div class="flag_img"></div>
-		    	</div>
+		    	</div> -->
 		    	<div class="things_style_area">
 		    		<label class="label">物品描述 :</label>
 		    		<textarea name="descri_f" rows="3" cols="20"></textarea>

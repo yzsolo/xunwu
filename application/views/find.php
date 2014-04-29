@@ -40,7 +40,7 @@
 				    <?php if($pre_btn==1){ ?>
 				   		<a class="pre_btn" href="<?php echo base_url("index.php/find/pagef_paging/".($cur_page-1)."") ?>">上一页</a>
 				   	<?php }else{ ?>
-						
+			
 				   	<?php } ?>
 				    <div class="fin_detail_span" id="detail_span">
 				    	<?php for($i=$default_start;$i<=$default_end;$i++){ ?>
