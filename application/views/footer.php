@@ -24,6 +24,9 @@
 	<script src="<?php echo base_url('/resource/js/index.js') ?>"></script>
 	<script src="<?php echo base_url('/resource/js/verify.js') ?>"></script>
 	<script src="<?php echo base_url('/resource/js/exrt.js') ?>"></script>
+	<script charset="utf-8" src="<?php echo base_url('/editor/kindeditor-min.js') ?>"></script>
+	<script charset="utf-8" src="<?php echo base_url('/editor/lang/zh_CN.js') ?>"></script>
+	<script src="<?php echo base_url('/resource/js/editor.js') ?>"></script>
 </div>
 </body>
 </html>

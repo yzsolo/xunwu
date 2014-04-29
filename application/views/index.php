@@ -22,7 +22,7 @@
 						<li><a href="<?php echo base_url("index.php/detail/pagef_detail/".$ind_fnews['f_id']."") ?>"><?php echo $ind_fnews['f_name'] ?></a></li>
 						<li><?php echo $ind_fnews['f_locale'] ?></li>
 						<li><?php echo $ind_fnews['f_time'] ?></li>
-						<li name="last"><nobr><?php echo $ind_fnews['f_describ'] ?></nobr></li>
+						<li name="last"><nobr><?php echo strip_tags($ind_fnews['f_describ']) ?></nobr></li>
 					</ul>
 					<?php endforeach ?>
 					<span><a href="<?php echo base_url('index.php/find/page_find') ?>">更多信息</a></span>
@@ -45,7 +45,7 @@
 						<li><a href="<?php echo base_url("index.php/detail/pagel_detail/".$ind_lnews['l_id']."") ?>"><?php echo $ind_lnews['l_name'] ?></a></li>
 						<li><?php echo $ind_lnews['l_locale'] ?></li>
 						<li><?php echo $ind_lnews['l_time'] ?></li>
-						<li name="last"><nobr><?php echo $ind_lnews['l_describ'] ?></nobr></li>
+						<li name="last"><nobr><?php echo strip_tags($ind_lnews['l_describ']) ?></nobr></li>
 					</ul>
 					<?php endforeach ?>
 					<span><a href="<?php echo base_url('/index.php/lost/page_lost') ?>">更多信息</a></span>

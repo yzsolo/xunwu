@@ -24,7 +24,7 @@
 						<li><a href="<?php echo base_url("index.php/detail/pagef_detail/".$news_item['f_id']."") ?>"><?php echo $news_item['f_name'] ?></a></li>
 						<li><?php echo $news_item['f_locale'] ?></li>
 						<li><?php echo $news_item['f_time'] ?></li>
-						<li name="last"><?php echo $news_item['f_describ'] ?></li>
+						<li name="last"><?php echo strip_tags($news_item['f_describ']) ?></li>
 						<li name="three"><a href="<?php echo base_url("index.php/detail/pagef_detail/".$news_item['f_id']."") ?>">[详情]</a></li>
 					</ul>
 				    <?php endforeach ?>
@@ -76,7 +76,7 @@
 						<li><a href="<?php echo base_url("index.php/detail/pagel_detail/".$news_item['l_id']."") ?>"><?php echo $news_item['l_name'] ?></a></li>
 						<li><?php echo $news_item['l_locale'] ?></li>
 						<li><?php echo $news_item['l_time'] ?></li>
-						<li name="last"><?php echo $news_item['l_describ'] ?></li>
+						<li name="last"><?php echo strip_tags($news_item['l_describ']) ?></li>
 						<li name="three"><a href="<?php echo base_url("index.php/detail/pagel_detail/".$news_item['l_id']."") ?>">[详情]</a></li>
 					</ul>
 				    <?php endforeach ?>

@@ -54,9 +54,8 @@
 		    	</div> -->
 		    	<div class="things_style_area">
 		    		<label class="label">物品描述 :</label>
-		    		<textarea name="descri_f" rows="3" cols="20"></textarea>
 		    	</div>
-		    	<div class="things_style">
+		    	<textarea id="editor" name="descri_f" style="visibility:hidden;"></textarea>
 		  		<div class="things_submit_l" name="things_sub" type="submit" value="提交">提交</div>
 		  	</form>
 		  		</div>

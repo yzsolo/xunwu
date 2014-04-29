@@ -31,7 +31,7 @@
 						<li><a href="<?php echo base_url("index.php/detail/pagef_detail/".$news_item['f_id']."") ?>"><?php echo $news_item['f_name'] ?></a></li>
 						<li><?php echo $news_item['f_locale'] ?></li>
 						<li><?php echo $news_item['f_time'] ?></li>
-						<li name="last"><nobr><?php echo $news_item['f_describ'] ?></nobr></li>
+						<li name="last"><nobr><?php echo strip_tags($news_item['f_describ']) ?></nobr></li>
 						<li name="three"><a href="<?php echo base_url("index.php/detail/pagef_detail/".$news_item['f_id']."") ?>">[详情]</a></li>
 					</ul>
 				    <?php endforeach ?>

@@ -131,6 +131,7 @@ $(document).ready(function(){
 	// })
 
 	$('.things_submit_l').click(function(){
+		editor.sync();
 		var kind_f = $(".kind select[name=kind_f]").val(),
 			name_f = $("input[name=name_f]").val(),
 			locale_f = $("input[name=locale_f]").val(),
@@ -138,7 +139,7 @@ $(document).ready(function(){
 			telnum_f = $("input[name=telnum_f]").val(),
 			// email_f = $("input[name=email_f]").val(),
 			// qq_f = $("input[name=qq_f]").val(),
-			descri_f = $("textarea[name=descri_f]").val()
+			descri_f = $("textarea[name=descri_f]").val();
 		var flag = flag_kind&flag_name&flag_locale&flag_finder&flag_telnum;
 		if(flag){
 			$.ajax({
@@ -163,6 +164,7 @@ $(document).ready(function(){
 	})
 
 	$('.things_submit_f').click(function(){
+		editor.sync();
 		var kind_f = $(".kind select[name=kind_f]").val(),
 			name_f = $("input[name=name_f]").val(),
 			locale_f = $("input[name=locale_f]").val(),
@@ -170,7 +172,7 @@ $(document).ready(function(){
 			telnum_f = $("input[name=telnum_f]").val(),
 			// email_f = $("input[name=email_f]").val(),
 			// qq_f = $("input[name=qq_f]").val(),
-			descri_f = $("textarea[name=descri_f]").val()
+			descri_f = $("textarea[name=descri_f]").val();
 		var flag = flag_kind&flag_name&flag_locale&flag_finder&flag_telnum;
 		if(flag){
 			$.ajax({
