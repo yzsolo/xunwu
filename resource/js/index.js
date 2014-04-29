@@ -138,7 +138,7 @@ $(document).ready(function(){
 			telnum_f = $("input[name=telnum_f]").val(),
 			// email_f = $("input[name=email_f]").val(),
 			// qq_f = $("input[name=qq_f]").val(),
-			descri_f = $("textarea[name=descri_f]").val()
+			descri_f = $("textarea[name=descri_f]").val();
 		var flag = flag_kind&flag_name&flag_locale&flag_finder&flag_telnum;
 		if(flag){
 			$.ajax({
@@ -170,7 +170,7 @@ $(document).ready(function(){
 			telnum_f = $("input[name=telnum_f]").val(),
 			// email_f = $("input[name=email_f]").val(),
 			// qq_f = $("input[name=qq_f]").val(),
-			descri_f = $("textarea[name=descri_f]").val()
+			descri_f = $("textarea[name=descri_f]").val();
 		var flag = flag_kind&flag_name&flag_locale&flag_finder&flag_telnum;
 		if(flag){
 			$.ajax({
