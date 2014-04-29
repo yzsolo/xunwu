@@ -136,7 +136,7 @@ class Find extends CI_Controller {
 
 				if($page_num+3>=$data['num']){
 					$data['default_end']=$data_num;
-					echo $data_num;
+					// echo $data_num;
 					$data['default_start']=($data_num-5<=0?1:($data_num-5));
 
 					if($data_num<=6){
