@@ -9,7 +9,7 @@
 		<li name="three"><a href="<?php echo base_url("index.php/detail/pagef_detail/".$news_item['f_id']."") ?>">[详情]</a></li>
 	</ul>
 <?php endforeach ?>
-哈哈
+
  <div class="paging_box">
     <?php if($pre_f_btn==1){ ?>
     
@@ -33,4 +33,5 @@
    	<?php } ?>
 </div>
  		
-<div id="cur_page"><?php echo $cur_page ?></div>
+<!-- <div id="cur_page"><?php echo $cur_page ?></div>
+ -->

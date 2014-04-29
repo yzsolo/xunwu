@@ -66,7 +66,6 @@ class Lost extends CI_Controller {
 		$num = $m['total_rows'];
 
 		$data['num'] = floor($num[0]['num']/14)+1;
-		echo $data['num'];
 		if($data['num']>6){
 			$data['default_end'] = 6;
 			$data['next_btn'] = 1;

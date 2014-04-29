@@ -1,7 +1,7 @@
 <div id="los_con">
 	<div class="los_con_detail">
 		<div class="los_tab">
-			<p>所有寻物信息<span>按物品类型查询</span></p>
+			<p>所有失物信息<span>按物品类型查询</span></p>
 			<select class="los_tab_select">
 				<option value="选择类型">选择类型</option>
 				<option value="书籍资料">书籍资料</option>
@@ -57,8 +57,8 @@
 				   	<?php } ?>
 				    </div>
 
-					<div id="cur_page"><?php echo $cur_page ?></div>
-				</div>
+<!-- 					<div id="cur_page"><?php echo $cur_page ?></div>
+ -->				</div>
 		    	
 		    </div>
 	    </div>
