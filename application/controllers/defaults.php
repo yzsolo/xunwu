@@ -158,7 +158,7 @@ class Defaults extends CI_Controller {
 			$this->load->view('search_paging_lost',$data);
 		
 		}else{
-			var_dump($search_page_num);
+			// var_dump($search_page_num);
 		}
 	}
 }

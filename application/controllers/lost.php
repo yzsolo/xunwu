@@ -191,7 +191,7 @@ class Lost extends CI_Controller {
 					$data['next_btn']=1;
 				}
 			}
-			echo $data['num'];
+			// echo $data['num'];
 			
 			$head['nav'] = 'lost';	// 当前页面
 			$this->load->view('header',$head);
