@@ -26,7 +26,8 @@ class Find extends CI_Controller {
 			$data['default_num'] = $data['num'];
 			$data['next_btn'] = 3;
 		}
-		$this->load->view('header');
+		$head['nav'] = 'find';	// 当前页面
+		$this->load->view('header',$head);
 		$this->load->view('find',$data);
 		$this->load->view('footer');
 	}
@@ -150,7 +151,8 @@ class Find extends CI_Controller {
 				}
 			}
 
-			$this->load->view('header');
+			$head['nav'] = 'find';	// 当前页面
+			$this->load->view('header',$head);
 			$this->load->view('find_part_paging',$data);
 			$this->load->view('footer');
 
@@ -201,7 +203,8 @@ class Find extends CI_Controller {
 				$data['next_btn']=1;
 			}
 		}
-		$this->load->view('header');
+		$head['nav'] = 'find';	// 当前页面
+		$this->load->view('header',$head);
 		$this->load->view('find',$data);
 		$this->load->view('footer');
 	}

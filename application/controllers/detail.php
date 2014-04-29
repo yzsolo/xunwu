@@ -35,7 +35,8 @@ class Detail extends CI_Controller {
 		$data['id'] = $id;	// 文章id，方便提交获取验证码
 		$data['table'] = "fmsg";	// 哪个数据库
 		// print_r($data);
-		$this->load->view('header');
+		$head['nav'] = 'find';	// 当前页面
+		$this->load->view('header',$head);
 		$this->load->view('detail_f',$data);
 		$this->load->view('footer');
 	}
@@ -50,7 +51,8 @@ class Detail extends CI_Controller {
 		$data['headTitle'] = "失物-".$data['one_new'][0]['l_name']."|寻物网";
 		$data['description'] = $data['one_new'][0]['l_describ'];
 		// print_r($data);
-		$this->load->view('header', $data);
+		$head['nav'] = 'lost';	// 当前页面
+		$this->load->view('header',$head);
 		$this->load->view('detail_l',$data);
 		$this->load->view('footer');
 	}

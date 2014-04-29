@@ -44,8 +44,25 @@
 </div>
 <div id="nav_box">
 	<div class="nav">
-	<a href="<?php echo base_url() ?>">首页</a>&nbsp;
-	<a href="<?php echo base_url('/index.php/lost/page_lost') ?>">失物信息</a>&nbsp;
-	<a href="<?php echo base_url('index.php/find/page_find') ?>">招领信息</a>
+	<?php 
+		$nav = isset($nav) ? $nav : '';
+	 ?>
+	<?php if ($nav == 'index'): ?>
+		<a href="<?php echo base_url() ?>" class="nav_cur">首页</a>&nbsp;
+		<a href="<?php echo base_url('/index.php/lost/page_lost') ?>">失物信息</a>&nbsp;
+		<a href="<?php echo base_url('index.php/find/page_find') ?>">招领信息</a>
+	<?php elseif ($nav == 'lost'): ?>
+		<a href="<?php echo base_url() ?>">首页</a>&nbsp;
+		<a href="<?php echo base_url('/index.php/lost/page_lost') ?>" class="nav_cur">失物信息</a>&nbsp;
+		<a href="<?php echo base_url('index.php/find/page_find') ?>">招领信息</a>
+	<?php elseif ($nav == 'find'): ?>
+		<a href="<?php echo base_url() ?>">首页</a>&nbsp;
+		<a href="<?php echo base_url('/index.php/lost/page_lost') ?>">失物信息</a>&nbsp;
+		<a href="<?php echo base_url('index.php/find/page_find') ?>" class="nav_cur">招领信息</a>
+	<?php else: ?>
+		<a href="<?php echo base_url() ?>">首页</a>&nbsp;
+		<a href="<?php echo base_url('/index.php/lost/page_lost') ?>">失物信息</a>&nbsp;
+		<a href="<?php echo base_url('index.php/find/page_find') ?>">招领信息</a>		
+	<?php endif ?>
     </div>
 </div>

@@ -25,7 +25,8 @@ class Lost extends CI_Controller {
 			$data['default_num'] = $data['num'];
 			$data['next_btn'] = 3;
 		}
-		$this->load->view('header');
+		$head['nav'] = 'lost';	// 当前页面
+		$this->load->view('header',$head);
 		$this->load->view('lost',$data);
 		$this->load->view('footer');
 	}
@@ -128,7 +129,8 @@ class Lost extends CI_Controller {
 				$data['next_btn']=1;
 			}
 		}
-		$this->load->view('header');
+		$head['nav'] = 'lost';	// 当前页面
+		$this->load->view('header',$head);
 		$this->load->view('lost',$data);
 		$this->load->view('footer');
 	}
@@ -191,7 +193,8 @@ class Lost extends CI_Controller {
 			}
 			echo $data['num'];
 			
-			$this->load->view('header');
+			$head['nav'] = 'lost';	// 当前页面
+			$this->load->view('header',$head);
 			$this->load->view('lost_part_paging',$data);
 			$this->load->view('footer');
 

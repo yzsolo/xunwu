@@ -13,7 +13,8 @@ class Defaults extends CI_Controller {
 	{
 		$data["f_news"] = $this->console_imf->imf_to_ind_f();
 		$data["l_news"] = $this->console_imf->imf_to_ind_l();
-		$this->load->view('header');
+		$head['nav'] = 'index';	// 当前页面
+		$this->load->view('header',$head);
 		$this->load->view('index',$data);
 		$this->load->view('footer');
 	}
