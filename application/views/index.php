@@ -60,7 +60,9 @@
 			<a href="<?php echo base_url('/index.php/descri_lost/page_descri_l') ?>"><div class="i_lost">我丢东西了</div></a>
 			<a href="<?php echo base_url('/index.php/descri_find/page_descri_f') ?>"><div class="i_find">我捡东西了</div></a>
 		</div>
-	    <div class="ad_one"></div>
+	    <div class="ad_one">
+	    	<!-- <a target="_blank" href="http://www.stuzone.com/zixunminda/blog/" title="资讯民大微信公众平台"><img src="<?php echo base_url('/resource/img/zixunminda.jpg') ?>" alt=""></a> -->
+	    </div>
 		<div class="ad_two"></div>
 	</div>
 </div>
