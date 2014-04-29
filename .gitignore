@@ -8,3 +8,4 @@ application/logs/*
 !application/logs/.htaccess
 captcha/*
 database.php
+editor/attached/*
