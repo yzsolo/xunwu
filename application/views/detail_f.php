@@ -25,8 +25,19 @@
 					<?php echo $one_new['0']['f_describ'] ?>
 				</p></li>
 				</ul>
+				<div class="help_find">
+					<span>帮忙转发到</span>
+					<div class="bdsharebuttonbox">
+						<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+						<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+						<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+						<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+						<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+						<a href="#" class="bds_more" data-cmd="more"></a>
+					</div>
+				</div>
 				<div class="i_find_btn_box">
-					<a href="#"><div class="i_find_btn">与Ta联系</div></a>
+					<a href="#"><div class="i_find_btn">与TA联系</div></a>
 				</div>
 				<div class="verify">
 					<form action="<?php echo base_url('index.php/detail'); ?>" method="POST" id="verifyForm">
@@ -38,27 +49,10 @@
 						<input type="submit" value="提交" id="send"/>
 					</form>
 				</div>
-				<div class="help_find">
-					<span>帮忙转发到</span>
-					<ul class='help_find_ul'>
-						<li name="one"><a href="#"><img src="<?php echo base_url('/resource/img/renren.jpg') ?>"></a></li>
-						<li name="two"><a href="#"><img src="<?php echo base_url('/resource/img/sina.jpg') ?>"></a></li>
-						<li name="three"><a href="#"><img src="<?php echo base_url('/resource/img/tencent.jpg') ?>"></a></li>
-					</ul>
-				</div>
 				<div class="i_respond_box">
-					<a href="#"><div class="i_respond">我要回应</div></a>
-					<p>为失主提供线索吧</p>
+					<div class="i_respond">我要回应</div>
 				</div>
-				<div class="write_msg">
-					<ul>
-						<li>我的回应</li>
-						<li><textarea cols="20px" rols="3px;"></textarea></li>
-					</ul>
-				</div>
-				<div class="send_msg_box">
-					<a href="#"><div class="send_msg">发布</div></a>
-				</div>
+				<div id="SOHUCS"></div>
 			</div>
 	    </div>
 	</div>
