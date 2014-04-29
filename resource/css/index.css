@@ -1,5 +1,6 @@
 body{
 	background-color:#fefefe;
+	background:#fefefe url(../img/background.png);
 }
  
 .response_div{
@@ -70,7 +71,8 @@ body{
 			margin:0 auto;
 }
 #top img{
-	margin-left:45px;
+	margin-left: 30px;
+	margin-top: 20px;	
 	position:absolute;
 }
 .login_register{
@@ -108,8 +110,12 @@ body{
 	float:left;
 	border-radius: 13px;
 	margin:2px;
+	cursor:pointer;
 	margin-top:3px;
-	background:#ffe476 url(../img/mglass.png) 50% 50% no-repeat;
+	background:#ffe88c url(../img/mglass.png) 50% 50% no-repeat;
+}
+.search_btn:hover{
+	background-color:#ffe476 ;
 }
 #nav_box{
 	width:100%;

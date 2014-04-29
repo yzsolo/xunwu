@@ -30,7 +30,7 @@
 	<div class="password"><input type="password"></div>
 </div>
 <div id="top">
-	<img src="<?php echo base_url('/resource/img/logo.jpg') ?>" alt="">
+	<img src="<?php echo base_url('/resource/img/logo.png') ?>" alt="">
 	<div class="login_register">
 		<!-- <span><a href="#" name="login_btn">登陆</a></span>
 		<span><a href="#" name="register_btn">注册</a></span> -->
