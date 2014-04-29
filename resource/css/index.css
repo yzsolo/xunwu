@@ -1257,7 +1257,7 @@ body{
 	background:#fefefe url(../img/relation_link_img.png) 2% 50% no-repeat;
 }
 #relation_link ul{
-	width:640px;
+	width: 700px;
 	height:30px;
 	margin-left:40px;
 }
