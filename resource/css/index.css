@@ -23,7 +23,7 @@ body{
 	text-indent:20px;
 }
 .paging_box{
-	width:292px;
+	width:335px;
 	height:30px;
 	margin:auto;
 	position:absolute;
@@ -32,6 +32,9 @@ body{
 	left:0px;
 	right:0px;
 	bottom:0px;
+}
+.paging_box p{
+	line-height:28px;
 }
 
 
@@ -43,7 +46,7 @@ body{
   color:#ef4d4e;
   cursor:pointer;
   display:block;
-  margin-left:4px;
+  margin-left:9px;
   border-radius:12px;
 }
 #detail_span span:hover{
@@ -132,7 +135,7 @@ body{
 }
 .nav a{
 	/*margin-left: 20px;*/
-	width: 120px;
+	width: 100px;
 	font-size: 18px;
 	line-height:40px;
 	/*margin-top:-25px;*/
@@ -157,8 +160,8 @@ body{
 	text-decoration:none;
 }
 .nav_cur{
-	background:url(../img/tab_back1.png) 50% 50%;
-	font-size:20px;
+	background-color:#febd00;
+	border-radius:5px;
 }
 /* top end */
 
@@ -893,7 +896,7 @@ body{
 	text-decoration:none;
 }
 .fin_detail_span{
-	width:170px;
+	width:210px;
 	height:30px;
 	float:left;
 	/*margin:0 auto;*/
