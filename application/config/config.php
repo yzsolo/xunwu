@@ -357,6 +357,11 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
+/*
+默认时区设置
+*/
+$config['time_zone'] = date_default_timezone_set("PRC");	//北京时间
+date_default_timezone_set("PRC");	//北京时间
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */
