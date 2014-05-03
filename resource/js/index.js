@@ -15,7 +15,7 @@ $(document).ready(function(){
 			'.things_submit_l click': 'things_submit_l',
 			'.things_submit_f click': 'things_submit_f',
 			'.fin_tab_select change': 'fin_tab_select_change',
-			'.los_tab_select change': 'los_tab-select_change'
+			'.los_tab_select change': 'los_tab_select_change'
 		},
 
 		eve_bind: function(){
