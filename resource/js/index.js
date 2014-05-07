@@ -15,7 +15,8 @@ $(document).ready(function(){
 			'.things_submit_l click': 'things_submit_l',
 			'.things_submit_f click': 'things_submit_f',
 			'.fin_tab_select change': 'fin_tab_select_change',
-			'.los_tab_select change': 'los_tab_select_change'
+			'.los_tab_select change': 'los_tab_select_change',
+			'li[name=del]>input click': 'del'
 		},
 
 		eve_bind: function(){
@@ -33,6 +34,31 @@ $(document).ready(function(){
 		},
 
 		eve_detail: {
+			del : function() {
+				var del_num = $(this).parent().text();
+				var kind = $('span[name=kind]').text();
+					if(kind == 'l') {
+						table = 'things_lost';
+						id = 'l_id';
+					} else if(kind == 'f') {
+						table = 'things_find';
+						id = 'f_id';
+					}
+				console.log(kind + ' ' +del_num);
+				$.ajax({
+					type:"post",
+					url:getRootPath()+"/index.php/manage/manage_del",
+					data:{
+						num:del_num,
+						id:id,
+						table:table
+					},
+					success:function() {
+						console.log('del success');
+					}
+				})
+				$(this).parent().parent().fadeOut();
+			},
 
 			focus : function() {
 				$(this).keypress(function(){

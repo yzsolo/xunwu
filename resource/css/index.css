@@ -3,6 +3,20 @@ body{
 	background:#fefefe url(../img/background.png);
 }
  
+.pre_next{
+	float:right;
+	margin-right:140px;
+	margin-top:-10px;
+}
+
+#body_manage{
+	background: url(../img/1.jpg);
+}
+
+.pre_next a{
+	margin-left:20px;
+}
+
 .response_div{
 	width: 780px;
 	min-height: 50px;

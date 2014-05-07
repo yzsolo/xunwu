@@ -24,11 +24,6 @@
 		 ?>">
 </head>
 <body>
-<div id="shade"></div>
-<div id="login">
-	<div class="count"><input type="text"></div>
-	<div class="password"><input type="password"></div>
-</div>
 <div id="top">
 	<img src="<?php echo base_url('/resource/img/logo.png') ?>" alt="">
 	<div class="login_register">

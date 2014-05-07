@@ -17,8 +17,9 @@
 		<li>加入我们</li>
 		<li>联系我们</li>
 		<li>免责声明</li>
+
 	</ul>
-	<p>&copy;2011-<?php echo date('Y'); ?>&nbsp;stuzone.com&nbsp;版权所有&nbsp;鄂ICP备20138号&nbsp;Powered&nbsp;By&nbsp;比特工场<img src="<?php echo base_url('/resource/img/bit_logo_img.png') ?>" alt=""></p>
+	<p>&copy;2011-<?php echo date('Y'); ?>&nbsp;stuzone.com&nbsp;版权<a href="<?php echo base_url('index.php/manage/login_manage')?>" style="color:#000;text-decoration:none;">所有</a>&nbsp;鄂ICP备20138号&nbsp;Powered&nbsp;By&nbsp;比特工场<img src="<?php echo base_url('/resource/img/bit_logo_img.png') ?>" alt=""></p>
 	 <script src="<?php echo base_url('/resource/js/jquery.js') ?>"></script> 
 	<!-- 为了兼容使用1.xx的版本 -->
 	<script src="http://cdn.staticfile.org/jquery/1.11.0/jquery.min.js"></script>

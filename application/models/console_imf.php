@@ -5,6 +5,51 @@ class Console_imf extends CI_Model{
 		$this->load->database();
 	}
 
+  // 后台管理 start
+  public function check_login() {
+    $sql = "select * from manager";
+    $query = $this->db->query($sql);
+    $res = $query->result_array();
+    return $res;
+  }
+
+  public function manage_imf() {
+
+  }
+
+  public function manage_kind($table,$id) {
+    $sql = "select * from $table order by $id desc limit 14";
+    $query = $this->db->query($sql);
+    $res['news'] = $query->result_array();
+    return $res;
+  }
+
+  public function manage_delete($num,$table,$id) {
+    $sql = "delete from $table where $id = $num";
+    $query = $this->db->query($sql);
+  }
+
+  public function manage_pre_next($num,$k) {
+    if($k == 'l'){
+      $query = $this->db->query("SELECT * FROM things_lost");
+      $res['total_row'] = $query->num_rows();
+
+      $sql = "select * from things_lost order by l_id desc limit $num,14";
+      $query = $this->db->query($sql);
+      $res['news'] = $query->result_array();
+      return $res;
+    }elseif($k == 'f'){
+      $query = $this->db->query("SELECT * FROM things_find");
+      $res['total_row'] = $query->num_rows();
+      $sql = "select * from things_find order by f_id desc limit $num,14";
+      $query = $this->db->query($sql);
+      $res['news'] = $query->result_array();
+      return $res;
+    }
+
+  }
+
+
   /*捡到的物品 start*/
 
   //search关键字并返回结果
