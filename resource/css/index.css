@@ -388,7 +388,8 @@ body{
 	overflow:hidden;
 	text-overflow:ellipsis;
 }
-li a{
+.ind_tab_find_detail li a,
+.ind_tab_lost_detail li a{
 	display:block;
 	width:97px;
 	height:30px;
