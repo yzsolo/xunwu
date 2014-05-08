@@ -198,7 +198,7 @@ $(document).ready(function(){
 			},
 
 			things_submit_f : function() {
-				event_bind.eve_detail_check_all();
+				event_bind.eve_detail.check_all();
 				editor.sync();
 				var kind_f = $(".kind select[name=kind_f]").val(),
 					name_f = $("input[name=name_f]").val(),
