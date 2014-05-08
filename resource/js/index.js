@@ -125,32 +125,50 @@ $(document).ready(function(){
 				});
 			},
 			check_name_f : function() {
-				flag_name = this.value==""?false:true,str = "input[name=name_f]+div";
+				flag_name = ($("input[name=name_f]").val()=='')?false:true,str = "input[name=name_f]+div";
 				flag_style(flag_name,str);
 			},
 
 			check_local_f : function() {
-				flag_locale = this.value==""?false:true,str = "input[name=locale_f]+div";
+				flag_locale = ($("input[name=locale_f]").val()=='')?false:true,str = "input[name=locale_f]+div";
 				flag_style(flag_locale,str);
 			},
 
 			check_finder_f : function() {
-				flag_finder = this.value==""?false:true,str = "input[name=finder_f]+div";
+				flag_finder = ($("input[name=finder_f]").val()=='')?false:true,str = "input[name=finder_f]+div";
 				flag_style(flag_finder,str);
 			},
 
 			check_kind_f : function() {
-				flag_kind = this.value=="选择类型"?false:true, str = "select[name=kind_f]+div";
+				flag_kind = ($(".kind select[name=kind_f]").val()=='选择类型')?false:true, str = "select[name=kind_f]+div";
 				flag_style(flag_kind,str);
 			},
 
 			check_telnum_f : function() {
 				var reg = new RegExp("^1[3|5|8]{1}[0-9]{9}$");
-				flag_telnum = reg.test(this.value), str = "input[name=telnum_f]+div";
+				flag_telnum = reg.test($("input[name=telnum_f]").val()), str = "input[name=telnum_f]+div";
 				flag_style(flag_telnum,str);
 			},
-
+			check_all : function() {
+				event_bind.eve_detail.check_name_f();
+				event_bind.eve_detail.check_local_f();
+				event_bind.eve_detail.check_finder_f();
+				event_bind.eve_detail.check_kind_f();
+				event_bind.eve_detail.check_telnum_f();
+				var check = {
+					"input[name=name_f]+div": flag_name,
+					"input[name=locale_f]+div": flag_locale,
+					"input[name=finder_f]+div": flag_finder,
+					"select[name=kind_f]+div": flag_kind,
+					"input[name=telnum_f]+div": flag_telnum
+				}
+				for(var i in check) {
+					var style_flag = check[i];
+						flag_style(style_flag,i);
+				}
+			},
 			things_submit_l : function() {
+				event_bind.eve_detail.check_all();
 				editor.sync();
 				var kind_f = $(".kind select[name=kind_f]").val(),
 					name_f = $("input[name=name_f]").val(),
@@ -180,6 +198,7 @@ $(document).ready(function(){
 			},
 
 			things_submit_f : function() {
+				event_bind.eve_detail_check_all();
 				editor.sync();
 				var kind_f = $(".kind select[name=kind_f]").val(),
 					name_f = $("input[name=name_f]").val(),
