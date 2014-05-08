@@ -381,9 +381,17 @@ body{
 	float:left;
 	display:inline;
 	margin-right:3px;
+    /*background-color:#ddd;*/
+}
+
+.li_hidden{
 	overflow:hidden;
 	text-overflow:ellipsis;
-    /*background-color:#ddd;*/
+}
+li a{
+	display:block;
+	width:97px;
+	height:30px;
 }
 .ind_tab_find_detail ul li a:link{
 	color:#ef4d4e;

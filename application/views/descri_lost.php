@@ -21,17 +21,17 @@
 		    	</div>
 		    	<div class="things_style">
 		    		<label class="label">物品名称 :</label>
-		    		<input name="name_f" maxlength="10" placeholder="物品名" type="text">
+		    		<input name="name_f" maxlength="20" placeholder="物品名" type="text">
 		    		<div class="flag_img"></div>
 		    	</div>
 		    	<div class="things_style">
 		    		<label class="label">丢失地点 :</label>
-		    		<input name="locale_f" maxlength="15" placeholder="发现地点" type="text">
+		    		<input name="locale_f" maxlength="25" placeholder="发现地点" type="text">
 		    		<div class="flag_img"></div>
 		    	</div>
 		    	<div class="things_style">
 		    		<label class="label">失主姓名 :</label>
-		    		<input name="finder_f" maxlength="10" placeholder="失主姓名" type="text">
+		    		<input name="finder_f" maxlength="20" placeholder="失主姓名" type="text">
 		    		<div class="flag_img"></div>
 		    	</div>
 		    	<!-- <div class="things_style">
