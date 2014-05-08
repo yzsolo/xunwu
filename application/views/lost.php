@@ -27,11 +27,11 @@
 				<div class="los_detail">
 					<?php foreach ($news as $news_item): ?>
 					<ul>
-						<li name="one"><?php echo $news_item['l_kind'] ?></li>
-						<li><a href="<?php echo base_url("index.php/detail/pagel_detail/".$news_item['l_id']."") ?>"><?php echo $news_item['l_name'] ?></a></li>
-						<li><?php echo $news_item['l_locale'] ?></li>
-						<li><?php echo $news_item['l_time'] ?></li>
-						<li name="last"><nobr><?php echo strip_tags($news_item['l_describ']) ?></nobr></li>
+						<li name="one" class="li_hidden"><?php echo $news_item['l_kind'] ?></li>
+						<li class="li_hidden"><a href="<?php echo base_url("index.php/detail/pagel_detail/".$news_item['l_id']."") ?>"><?php echo $news_item['l_name'] ?></a></li>
+						<li class="li_hidden"><?php echo $news_item['l_locale'] ?></li>
+						<li class="li_hidden"><?php echo $news_item['l_time'] ?></li>
+						<li name="last" class="li_hidden"><nobr><?php echo strip_tags($news_item['l_describ']) ?></nobr></li>
 						<li name="three"><a href="<?php echo base_url("index.php/detail/pagel_detail/".$news_item['l_id']."") ?>">[详情]</a></li>
 					</ul>
 				    <?php endforeach ?>

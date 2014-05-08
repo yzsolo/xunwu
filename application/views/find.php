@@ -30,7 +30,7 @@
 						<li name="one" class="li_hidden"><?php echo $news_item['f_kind'] ?></li>
 						<li class="li_hidden"><a href="<?php echo base_url("index.php/detail/pagef_detail/".$news_item['f_id']."") ?>"><?php echo $news_item['f_name'] ?></a></li>
 						<li class="li_hidden"><?php echo $news_item['f_locale'] ?></li>
-						<li class="li_hidden"><?php echo $news_item['f_time'] ?></li>
+						<li><?php echo $news_item['f_time'] ?></li>
 						<li name="last" class="li_hidden"><nobr><?php echo strip_tags($news_item['f_describ']) ?></nobr></li>
 						<li name="three"><a href="<?php echo base_url("index.php/detail/pagef_detail/".$news_item['f_id']."") ?>">[详情]</a></li>
 					</ul>
