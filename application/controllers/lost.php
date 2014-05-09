@@ -15,7 +15,7 @@ class Lost extends CI_Controller {
 		$data["cur_page"] = 1;
 		$data['default_start']=1;
 		$data['pre_btn']=0;
-		$data['default_end']=6;
+		$data['default_end']=$data['num'];
 		$data['news'] = $l['news'];
 		$data['num'] = floor($l['total_rows'] / 14) + 1;
 		if($data['num']>6){
