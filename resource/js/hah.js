@@ -1,9 +1,9 @@
 for (var i = 0; i<=4; i++){
 	$('.search_los_nav ul li').eq(i).css(
-			"background",'#eee url('+getRootPath()+'/resource/img/tab_bgimg'+(i+1)+'.png) 10% 50% no-repeat'
+			"background",'#eee url(../../resource/img/tab_bgimg'+(i+1)+'.png) 10% 50% no-repeat'
 		)
 	$('.search_fin_nav ul li').eq(i).css(
-			"background",'#eee url('+getRootPath()+'/resource/img/tab_bgimg'+(i+1)+'.png) 10% 50% no-repeat'
+			"background",'#eee url(../../resource/img/tab_bgimg'+(i+1)+'.png) 10% 50% no-repeat'
 	)
 }
 
