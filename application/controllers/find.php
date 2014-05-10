@@ -21,10 +21,10 @@ class Find extends CI_Controller {
 		$data['news'] = $f['news'];
 		
 		if($data['num']>6){
-			$data['default_num'] = 6;
+			$data['default_end'] = 6;
 			$data['next_btn'] = 1;
 		}else{
-			$data['default_num'] = $data['num'];
+			$data['default_end'] = $data['num'];
 			$data['next_btn'] = 3;
 		}
 		$head['nav'] = 'find';	// 当前页面

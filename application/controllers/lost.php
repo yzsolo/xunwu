@@ -20,10 +20,11 @@ class Lost extends CI_Controller {
 		$data['news'] = $l['news'];
 		
 		if($data['num']>6){
-			$data['default_num'] = 6;
+			$data['default_end'] = 6;
+			echo 'yz';
 			$data['next_btn'] = 1;
 		}else{
-			$data['default_num'] = $data['num'];
+			$data['default_end'] = $data['num'];
 			$data['next_btn'] = 3;
 		}
 		$head['nav'] = 'lost';	// 当前页面
