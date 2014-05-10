@@ -44,11 +44,11 @@ $('.paging_box span').on('click',function(){
 $('.search_f').on('click',function(){
 		// $('.search_thekind').text('f');
 		$(this).css({
-			'background-image':'url(../img/tab_img_down.png)',
+			'background-image':'url(../../resource/img/tab_img_down.png)',
 			'background-color':'#eee'
 	  });
 		$('.search_l').css({
-		  'background-image':'url(../img/tab_img_up.png)',
+		  'background-image':'url(../../resource/img/tab_img_up.png)',
 		  'background-color':'#fff'
 		})
 		$('.search_find_con').show().next().hide();
@@ -57,11 +57,11 @@ $('.search_f').on('click',function(){
 	$('.search_l').on('click',function(){
 				// $('.search_thekind').text('l');
 		$(this).css({
-			'background-image':'url(../img/tab_img_down.png)',
+			'background-image':'url(../../resource/img/tab_img_down.png)',
 			'background-color':'#eee'
 	  });
 		$('.search_f').css({
-		  'background-image':'url(../img/tab_img_up.png)',
+		  'background-image':'url(../../resource/img/tab_img_up.png)',
 		  'background-color':'#fff'
 		})
 		$('.search_lost_con').show().prev().hide();
