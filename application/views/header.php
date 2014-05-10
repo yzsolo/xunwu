@@ -9,7 +9,6 @@
 			} else {
 				echo "寻物-民大失物招领平台|学生地带";
 			}
-			
 		 ?>
 	</title>
 	<link rel="stylesheet" href="<?php echo base_url('/resource/css/basic.css') ?>">
