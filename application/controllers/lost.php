@@ -21,7 +21,6 @@ class Lost extends CI_Controller {
 		
 		if($data['num']>6){
 			$data['default_end'] = 6;
-			echo 'yz';
 			$data['next_btn'] = 1;
 		}else{
 			$data['default_end'] = $data['num'];
