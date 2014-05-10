@@ -6,22 +6,22 @@
 	    <div class="detail_con">
 			<div class="detail_detail">
 				<ul class="detail_ul_first">
-					<li>物品名称</li><li><?php echo $one_new['0']['f_name'] ?></li>
+					<li>物品名称：</li><li><?php echo $one_new['0']['f_name'] ?></li>
 				</ul>
 				<ul>
-					<li>物品类型</li><li><?php echo $one_new['0']['f_kind'] ?></li>
+					<li>物品类型：</li><li><?php echo $one_new['0']['f_kind'] ?></li>
 				</ul>
 				<ul>
-					<li>拾物地点</li><li><?php echo $one_new['0']['f_locale'] ?></li>
+					<li>拾物地点：</li><li><?php echo $one_new['0']['f_locale'] ?></li>
 				</ul>
 				<ul>
-					<li>发布时间</li><li><?php echo $one_new['0']['f_time'] ?></li>
+					<li>发布时间：</li><li><?php echo $one_new['0']['f_time'] ?></li>
 				</ul>
 				<ul>
-					<li>发现人</li><li><?php echo $one_new['0']['f_finder'] ?></li>
+					<li>发现人：</li><li><?php echo $one_new['0']['f_finder'] ?></li>
 				</ul>
 				<ul>
-					<li>详情描述</li><li class="detail_li"><p>
+					<li>详情描述：</li><li class="detail_li"><p>
 					<?php echo $one_new['0']['f_describ'] ?>
 				</p></li>
 				</ul>
