@@ -329,10 +329,10 @@ $(document).ready(function(){
 
 	function getRootPath() { //得到网站的根目录 
 		var strFullPath = window.document.location.host;
-		    // strPath = window.document.location.pathname, 
-		    // pos = strFullPath.indexOf(strPath),
-		    // prePath = strFullPath.substring(0,pos), 
-		    // postPath = strPath.substring(0,strPath.substr(1).indexOf('/') + 1);
+		    strPath = window.document.location.pathname, 
+		    pos = strFullPath.indexOf(strPath),
+		    prePath = strFullPath.substring(0,pos), 
+		    postPath = strPath.substring(0,strPath.substr(1).indexOf('/') + 1);
 		return(strFullPath); 
 	} 
 })
