@@ -47,7 +47,7 @@ $(document).ready(function(){
 				console.log(kind + ' ' +del_num);
 				$.ajax({
 					type:"post",
-					url:"/index.php/manage/manage_del",
+					url:getRootPath()+"/index.php/manage/manage_del",
 					data:{
 						num:del_num,
 						id:id,
@@ -66,13 +66,13 @@ $(document).ready(function(){
 						var search_input = $('input[name="search_input"]').val();
 						$.ajax({
 							type:"post",
-							url:"/index.php/defaults/search_result",
+							url:getRootPath()+"/index.php/defaults/search_result",
 							data:{
 								search_input:search_input
 							},
 							success:function(msg){
 								$('#nav_box').next().html(msg);
-								loadjs('/resource/js/hah.js');
+								loadjs(getRootPath()+'/resource/js/hah.js');
 								ul_style();
 								page_effect();
 						        
@@ -86,13 +86,13 @@ $(document).ready(function(){
 				var search_input = $('input[name="search_input"]').val();
 				$.ajax({
 					type:"post",
-					url:"/index.php/defaults/search_result",
+					url:getRootPath()+"/index.php/defaults/search_result",
 					data:{
 						search_input:search_input
 					},
 					success:function(msg){
 						$('#nav_box').next().html(msg);
-						loadjs('/resource/js/hah.js');
+						loadjs(getRootPath()+'/resource/js/hah.js');
 						ul_style();
 						page_effect();
 					}
@@ -180,7 +180,7 @@ $(document).ready(function(){
 				if(flag){
 					$.ajax({
 						type:"POST",
-						url:"/index.php/descri_lost/imformation",
+						url:getRootPath()+"/index.php/descri_lost/imformation",
 						data:{
 							kind_f:kind_f,
 							name_f:name_f,
@@ -191,7 +191,7 @@ $(document).ready(function(){
 						},
 						success:function(msg) {
 							alert("提交成功");
-							window.location.href="/index.php";
+							window.location.href=getRootPath()+"/index.php";
 					    }
 					})
 				}
@@ -210,7 +210,7 @@ $(document).ready(function(){
 				if(flag){
 					$.ajax({
 					type:"POST",
-					url:"/index.php/descri_find/imformation",
+					url:getRootPath()+"/index.php/descri_find/imformation",
 					data:{
 						kind_f:kind_f,
 						name_f:name_f,
@@ -221,7 +221,7 @@ $(document).ready(function(){
 					},
 					success:function(msg) {
 						alert("提交成功");
-						window.location.href="/index.php";
+						window.location.href=getRootPath()+"/index.php";
 				    }
 					})
 				}
@@ -232,7 +232,7 @@ $(document).ready(function(){
 				var flag = 1;
 				$.ajax({
 					type:"POST",
-					url:"/index.php/find/page_find_kind",
+					url:getRootPath()+"/index.php/find/page_find_kind",
 					data:{
 						fkind:kind,
 						flag:flag
@@ -251,7 +251,7 @@ $(document).ready(function(){
 				var flag = 1;
 				$.ajax({
 					type:"POST",
-					url:"/index.php/lost/page_lost_kind",
+					url:getRootPath()+"/index.php/lost/page_lost_kind",
 					data:{
 						lkind:kind,
 						flag:flag
