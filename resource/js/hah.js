@@ -1,9 +1,9 @@
 for (var i = 0; i<=4; i++){
 	$('.search_los_nav ul li').eq(i).css(
-			"background",'#eee url(../../resource/img/tab_bgimg'+(i+1)+'.png) 10% 50% no-repeat'
+			"background",'#eee url(../img/tab_bgimg'+(i+1)+'.png) 10% 50% no-repeat'
 		)
 	$('.search_fin_nav ul li').eq(i).css(
-			"background",'#eee url(../../resource/img/tab_bgimg'+(i+1)+'.png) 10% 50% no-repeat'
+			"background",'#eee url(../img/tab_bgimg'+(i+1)+'.png) 10% 50% no-repeat'
 	)
 }
 
@@ -22,7 +22,7 @@ $('.paging_box span').on('click',function(){
 
 		$.ajax({
 			type:"post",
-			url:getRootPath()+"/index.php/defaults/search_paging",
+			url:"faults/search_paging",
 			data:{
 				search_page_num:search_page_num,
 				search_page_kind:search_page_kind,
@@ -30,10 +30,10 @@ $('.paging_box span').on('click',function(){
 			},
 			success:function(msg){
 			if(search_page_kind=='f'){
-				loadjs(getRootPath()+'/resource/js/hah.js');
+				loadjs('hah.js');
 				$('.fin_detail').html(msg);
 			}else if(search_page_kind=='l'){
-				loadjs(getRootPath()+'/resource/js/hah.js');
+				loadjs('hah.js');
 				$('.los_detail').html(msg);
 			}
 				page_effect();
@@ -44,11 +44,11 @@ $('.paging_box span').on('click',function(){
 $('.search_f').on('click',function(){
 		// $('.search_thekind').text('f');
 		$(this).css({
-			'background-image':'url('+getRootPath()+'/resource/img/tab_img_down.png)',
+			'background-image':'url(../img/tab_img_down.png)',
 			'background-color':'#eee'
 	  });
 		$('.search_l').css({
-		  'background-image':'url('+getRootPath()+'/resource/img/tab_img_up.png)',
+		  'background-image':'url(../img/tab_img_up.png)',
 		  'background-color':'#fff'
 		})
 		$('.search_find_con').show().next().hide();
@@ -57,11 +57,11 @@ $('.search_f').on('click',function(){
 	$('.search_l').on('click',function(){
 				// $('.search_thekind').text('l');
 		$(this).css({
-			'background-image':'url('+getRootPath()+'/resource/img/tab_img_down.png)',
+			'background-image':'url(../img/tab_img_down.png)',
 			'background-color':'#eee'
 	  });
 		$('.search_f').css({
-		  'background-image':'url('+getRootPath()+'/resource/img/tab_img_up.png)',
+		  'background-image':'url(../img/tab_img_up.png)',
 		  'background-color':'#fff'
 		})
 		$('.search_lost_con').show().prev().hide();
