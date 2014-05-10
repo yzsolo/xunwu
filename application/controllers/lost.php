@@ -2,14 +2,14 @@
 
 class Lost extends CI_Controller {
 
-	public function __construct()
+	function __construct()
 	{
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->model('console_imf');
 	}
 
-	public function page_lost()
+	public function index()
 	{
 		$l = $this->console_imf->imf_to_pagel();
 		$data["cur_page"] = 1;

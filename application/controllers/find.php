@@ -2,7 +2,7 @@
 
 class Find extends CI_Controller {
 
-	public function __construct()
+	function __construct()
 	{
 		parent::__construct();
 		$this->load->helper('url');
@@ -10,7 +10,7 @@ class Find extends CI_Controller {
 		$this->load->database();
 	}
 
-	public function page_find()
+	public function index()
 	{	
 	    $f = $this->console_imf->imf_to_pagef();
 	    $data["cur_page"] = 1;

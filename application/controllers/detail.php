@@ -2,7 +2,7 @@
 
 class Detail extends CI_Controller {
 
-	public function __construct()
+	function __construct()
 	{
 		parent::__construct();
 		session_start();
