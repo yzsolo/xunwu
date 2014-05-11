@@ -246,8 +246,8 @@ body{
 	float:left;
 	height:40px;
 	line-height: 40px;
-	border-top-left-radius:8px;
-	border-top-right-radius:8px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
 	cursor:pointer;
 	text-indent:22px;
 	margin-left:20px;
@@ -258,8 +258,8 @@ body{
 	width:140px;
 	height:40px;
 	line-height: 40px;
-	border-top-left-radius:8px;
-	border-top-right-radius:8px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
 	cursor:pointer;
 	text-indent:22px;
 	float:left;
