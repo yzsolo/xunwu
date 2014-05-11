@@ -7,7 +7,7 @@
 			if (isset($headTitle)) {
 				echo $headTitle;
 			} else {
-				echo "寻物-民大失物招领平台|学生地带";
+				echo "寻物-民大失物招领信息发布平台|学生地带";
 			}
 		 ?>
 	</title>
