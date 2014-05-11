@@ -20,6 +20,16 @@
 				echo "";
 			}
 		 ?>">
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c1fca17b9049dadb857eb6ab12c694bd";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 </head>
 <body>
 <div id="top">

@@ -20,7 +20,7 @@
 
 	</ul>
 	<p>&copy;2011-<?php echo date('Y'); ?>&nbsp;stuzone.com&nbsp;版权<a href="<?php echo base_url('index.php/manage/login_manage')?>" style="color:#000;text-decoration:none;">所有</a>&nbsp;鄂ICP备20138号&nbsp;Powered&nbsp;By&nbsp;比特工场<img src="<?php echo base_url('/resource/img/bit_logo_img.png') ?>" alt=""></p>
-	 <script src="<?php echo base_url('/resource/js/jquery.js') ?>"></script> 
+	 <!-- <script src="<?php echo base_url('/resource/js/jquery.js') ?>"></script> -->
 	<!-- 为了兼容使用1.xx的版本 -->
 	<script src="http://cdn.staticfile.org/jquery/1.11.0/jquery.min.js"></script>
 	<script src="<?php echo base_url('/resource/js/index.js') ?>"></script>
@@ -30,9 +30,6 @@
 	<script charset="utf-8" src="<?php echo base_url('/editor/lang/zh_CN.js') ?>"></script>
 	<script src="<?php echo base_url('/resource/js/editor.js') ?>"></script>
 </div>
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc1fca17b9049dadb857eb6ab12c694bd' type='text/javascript'%3E%3C/script%3E"));
-</script>
+
 </body>
 </html>
