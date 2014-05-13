@@ -11,8 +11,9 @@
 			}
 		 ?>
 	</title>
-	<link rel="stylesheet" href="<?php echo base_url('/resource/css/basic.css') ?>">
-	<link rel="stylesheet" href="<?php echo base_url('/resource/css/index.css') ?>">
+	<link rel="shortcut icon" href="<?php echo base_url('/resource/img/favicon.ico') ?>" />
+	<link rel="stylesheet" href="<?php echo base_url('/resource/css/basic.css') ?>" />
+	<link rel="stylesheet" href="<?php echo base_url('/resource/css/index.css') ?>" />
 	<meta name="description" content="<?php 
 			if (isset($description)) {
 				echo $description;
