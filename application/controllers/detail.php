@@ -24,7 +24,7 @@ class Detail extends CI_Controller {
 
 		$date = create_captcha($vals);
 		$_SESSION['yanzhen'] = sha1($ranNum.sha1("xunwu2014"));
-		return $date['image'];	
+		return $date['image'];
 	}
 
 	public function pagef_detail()

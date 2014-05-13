@@ -6,11 +6,73 @@ class Descri_lost extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->helper('captcha');
 		$this->load->model('console_imf');
+	}
+
+	private function create()	// 标准方法创建验证码，并将验证码的值存到session
+	{
+		$img_url = base_url()."captcha/";
+		$ranNum = rand(1000,9999);
+		$vals = array(
+		'word' => $ranNum,
+		'img_path' => './captcha/',
+		'img_url' => $img_url,
+		'expiration' => 60
+		);
+
+		$date = create_captcha($vals);
+		$_SESSION['yanzhen_descri'] = sha1($ranNum.sha1("xunwu2014"));
+		return $date['image'];
+	}
+
+	/**
+	* 刷新验证码
+	* @return img url
+	*/
+
+	public function refresh()
+	{
+		$img_url = base_url()."captcha/";
+		$ranNum = rand(1000,9999);
+		$vals = array(
+		'word' => $ranNum,
+		'img_path' => './captcha/',
+		'img_url' => $img_url,
+		'expiration' => 60,
+		);
+
+		$date = create_captcha($vals);
+		$_SESSION['yanzhen_descri'] = sha1($ranNum.sha1("xunwu2014"));
+
+		echo $img_url.$date['time'].".jpg";
+	}
+
+	/**
+	* 判断验证码是否正确
+	* @return Json-Boolean
+	*/
+
+	public function verify()
+	{
+		$verify = $_POST['verify-input'];
+		$verify = sha1($verify.sha1("xunwu2014"));
+		if (isset($_SESSION['yanzhen_descri'])) {
+			if ($verify === $_SESSION['yanzhen_descri']) {
+				echo '{"status": "1"}';
+			}
+			else{
+				echo '{"status": "0"}';
+			}
+		}
+		else{
+			echo '{"status": "0"}';
+		}
 	}
 
 	public function page_descri_l()
 	{
+		$data['image'] = $this->create();	// 验证码
 		$data["title"] = "Find Something";
 		$this->load->view('header',$data);
 		$this->load->view('descri_lost');

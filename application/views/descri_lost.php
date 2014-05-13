@@ -56,6 +56,12 @@
 		    		<label class="label">物品描述 :</label>
 		    		<textarea id="editor" name="descri_f" style="visibility:hidden;"></textarea>
 		    	</div>
+		    	<div class="things_style things_style_verify">
+			    	<label class="label" for="verify-input-descri">验证码：</label>
+					<input type="text" id="verify-input-descri" size="8" pattern="[0-9]"/>
+					<?php echo $image; ?>
+					<div class="flag_img"></div>
+				</div>
 		  		<div class="things_submit_l" name="things_sub" type="submit" value="提交">提交</div>
 		  	</form>
 		  		</div>
