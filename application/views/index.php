@@ -25,7 +25,7 @@
 						<li name="last" class="li_hidden"><nobr><?php echo strip_tags($ind_fnews['f_describ']) ?></nobr></li>
 					</ul>
 					<?php endforeach ?>
-					<span><a href="<?php echo base_url('index.php/find/page_find') ?>">更多信息</a></span>
+					<span><a href="<?php echo base_url('index.php/find') ?>">更多信息</a></span>
 				</div>
 		    </div>
 		    <div class="ind_tab_lost_con">
@@ -48,7 +48,7 @@
 						<li name="last" class="li_hidden"><nobr><?php echo strip_tags($ind_lnews['l_describ']) ?></nobr></li>
 					</ul>
 					<?php endforeach ?>
-					<span><a href="<?php echo base_url('/index.php/lost/page_lost') ?>">更多信息</a></span>
+					<span><a href="<?php echo base_url('/index.php/lost') ?>">更多信息</a></span>
 				</div>
 
 		    </div>
