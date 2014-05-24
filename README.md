@@ -1,5 +1,5 @@
 xunwu
 =====
-URL: xunwu.stuzone.com
+URL: http://xunwu.stuzone.com
 
 find the things you lost :)
